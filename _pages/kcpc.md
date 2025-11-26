@@ -1,15 +1,15 @@
 ---
-layout: splash 
+layout: splash
 permalink: /kcpc/
 title: "Kansas City Psychedelic Conference"
-excerpt: "KCPC brings together psychedelic leaders, practitioners, and advocates from across the nation as well as voices from the Kansas City community."
+excerpt: "Thank you for a great conference!"
 header:
   # overlay_color: "#000"
   # overlay_filter: "0.75"
   overlay_image: /assets/images/kcpcbanner.jpg
   actions:
-    - label: "Register Today"
-      url: "https://luma.com/gkp6hqyd"
+    - label: "Sign Up for Updates"
+      url: "https://lu.ma/pskc"
       class: "btn btn--primary"
 gallery:
   - url: /assets/images/kcpc/mind.jpg
@@ -33,30 +33,34 @@ gallery3:
   - url: https://www.evolution-mag.com/
     image_path: /assets/images/kcpc/evolution.jpg
     alt: "The Evolution Magazine Logo"
-    #title: "The BODY track features all of our workshops, group activities, and ceremonies  
+    #title: "The BODY track features all of our workshops, group activities, and ceremonies
   #- url: /assets/images/kcpc/yogabsi.jpg
   #  image_path: /assets/images/kcpc/keyhole.jpg
   #  alt: "Keyhole Consulting & Wellness"
-    #title: "The BODY track features all of our workshops, group activities, and ceremonies"" 
+    #title: "The BODY track features all of our workshops, group activities, and ceremonies""
 ---
-#### Explore
+## Thank You for a Great Conference!
 {: .text-center}
 
-- **Advancements in Psychedelic Science**
-- **Harm Reduction & Psychedelic Integration Discussion Panels**
-- **Updates on Psychedelic Policy Efforts in Missouri**
-- **Intimate Group Workshops Featuring Ecstatic Dance, Meditation, Yoga, Authentic Relating, Cacao Cermonies, and more!**
+We are grateful to everyone who attended and contributed to making the Kansas City Psychedelic Conference a success. Photos and recordings from the conference will be available soon.
+
+[Sign up for our newsletter](https://lu.ma/pskc){: .btn .btn--primary} to be the first to know when recordings are available!
+{: .text-center}
+
+### What's Next?
+{: .text-center}
+
+We have exciting upcoming events planned. Check out our [events page](/events/) to see what's coming up!
+{: .text-center}
 
 #### Lineup
 {: .text-center}
 
-
 {% include gallery caption="The full lineup for the **Kansas City Psychedelic Conference**." %}
-
 
 #### Special Thanks
 {: .text-center}
-We would like to extend our sincerest graditudes for those who are sponsoring KCPC and making this possible
+We would like to extend our sincerest gratitudes for those who sponsored KCPC and made this possible
 {: .text-center}
 
 ##### Visionary Sponsor
@@ -66,16 +70,4 @@ We would like to extend our sincerest graditudes for those who are sponsoring KC
 ##### Trailblazer Sponsors
 {: .text-center}
 {% include gallery id="gallery3" layout="half" caption="Our Trailblazer Sponsors for KCPC 2025" %}
-
-###### Help Out
-{: .text-center}
-
-Volunteers, Sponsors, and Vendors are encouraged to fill out their applications by **November 1st**
-{: .text-center}
-
-[Sponsor & Vendor Application](https://forms.gle/kixvX9AdE5NzSDaX8){: .btn .btn--info .btn--large}
-{: .text-center}
-
-[Event Volunteer Waitlist](https://forms.gle/QVXHRW4WTjT3qoaE9){: .btn .btn--info .btn--large}
-{: .text-center}
 
