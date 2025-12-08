@@ -1,5 +1,5 @@
 ---
-title: "PSKC Urges Kansas City Council to Reject 'Gas Station Drug' Ordinance, Citing Overreach, Public Health Risks, and Due Process Concerns"
+title: 'PSKC Urges Kansas City Council to Reject "Gas Station Drug Ordinance"'
 date: 2025-12-08
 categories:
   - Press Release
@@ -13,10 +13,7 @@ tags:
 excerpt_separator: "<!--more-->"
 ---
 
-**FOR IMMEDIATE RELEASE**
-December 8, 2025
-
-# PSKC Urges Kansas City Council to Reject "Gas Station Drug" Ordinance
+## **FOR IMMEDIATE RELEASE**
 
 **KANSAS CITY, MO** – The Psychedelic Society of Kansas City (PSKC) is calling on the Kansas City Council to reject **[Ordinance 251028](https://kansascity.legistar.com/LegislationDetail.aspx?ID=7770752&GUID=E5C1CA51-B5BE-4CA4-9867-21FCEFBCA552)**, a proposal to ban a broad range of psychoactive products and chemical inhalants often labeled as "gas station drugs."
 
