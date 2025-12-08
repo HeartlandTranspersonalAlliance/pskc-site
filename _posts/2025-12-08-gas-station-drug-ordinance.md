@@ -13,12 +13,12 @@ tags:
 excerpt_separator: "<!--more-->"
 ---
 
-**FOR IMMEDIATE RELEASE**
+**FOR IMMEDIATE RELEASE**<br>
 December 8, 2025
 
-**Contact:**
-Psychedelic Society of Kansas City (PSKC)
-Email: [info@psychedelickc.org](mailto:info@psychedelickc.org)
+**Contact:**<br>
+Psychedelic Society of Kansas City (PSKC)<br>
+Email: [info@psychedelickc.org](mailto:info@psychedelickc.org)<br>
 Website: [www.psychedelickc.org](https://www.psychedelickc.org)
 
 ---
