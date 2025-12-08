@@ -17,7 +17,6 @@ excerpt_separator: "<!--more-->"
 December 8, 2025
 
 **Contact:**<br>
-Psychedelic Society of Kansas City (PSKC)<br>
 Email: [info@psychedelickc.org](mailto:info@psychedelickc.org)<br>
 Website: [www.psychedelickc.org](https://www.psychedelickc.org)
 
