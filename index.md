@@ -2,7 +2,7 @@
 layout: splash 
 permalink: /
 title: "Stop KC's New War On Drugs"
-excerpt: "Join us at City Hall **December 9th at 10:30am** to oppose Ordinance 251028—a dangerous proposal that would ban kratom, Delta-8, and harm reduction tools while threatening small businesses with jail time. Your voice matters."
+excerpt: "Join us at City Hall on Janurary 2026 to oppose Ordinance 251028—a dangerous proposal that would ban kratom, Delta-8, and harm reduction tools while threatening small businesses with jail time. Your voice matters."
 header:
   overlay_color: "#000"
   overlay_filter: "0.25"
