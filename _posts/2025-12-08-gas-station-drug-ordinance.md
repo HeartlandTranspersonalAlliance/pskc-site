@@ -31,7 +31,7 @@ Website: [www.psychedelickc.org](https://www.psychedelickc.org)
 - **Products Affected:** Kratom, Delta-8 THC, Amanita muscaria, nitrous oxide, poppers, and more
 - **Business Impact:** License revocation possible without criminal conviction
 - **Harm Reduction:** Bans drug-checking kits and safe-use supplies
-- **Free Speech Concerns:** Educational information could be treated as criminal evidence
+- **Free Speech Concerns:** Educational information would be treated as criminal evidence
 {: .notice--warning}
 
 ### What the Ordinance Would Do
@@ -57,11 +57,13 @@ PSKC warns that, as written, the ordinance is overbroad, vague, and out of step 
 
 PSKC's first concern is that the ordinance's definitions of "novel psychoactive drugs" and "intoxicating cannabinoid products" are extremely broad and unclear.
 
-By outlawing any substance with a psychoactive effect "similar" to a Schedule I or II drug, the ordinance could sweep in:
+The ordinance specifically bans:
 
 - **Kratom**, which is currently legal under Missouri law and used by some people managing pain or opioid dependence
+- **Hemp-derived Delta-8 and Delta-9 THC products**, which are legal under federal and state law
 - **Amanita muscaria**, a legal mushroom with traditional and spiritual uses
-- **Herbal products** like kava or certain teas that have calming or mood-altering effects but are not controlled substances
+
+Beyond these specific products, the ordinance's vague language outlawing any substance with a psychoactive effect "similar" to a Schedule I or II drug could also sweep in **herbal products** like kava or certain teas that have calming or mood-altering effects but are not controlled substances.
 
 For everyday retailers, this creates a guessing game about what is legal.
 
@@ -71,7 +73,7 @@ For everyday retailers, this creates a guessing game about what is legal.
 
 #### 2. Drug Paraphernalia Ban Undermines Harm Reduction
 
-The ordinance also revives a broad paraphernalia ban, targeting items "designed, marketed, or intended" for consuming these substances. In practice, this could impact:
+The ordinance also revives a broad paraphernalia ban, targeting items "designed, marketed, or intended" for consuming these substances. **This will impact:**
 
 - Pipes, vaporizers, and similar items
 - Drug-checking kits (such as fentanyl test strips)
@@ -106,7 +108,7 @@ The ordinance allows inspectors to treat **ordinary speech and educational infor
 - A health educator describing the effects of kratom or nitrous oxide
 - Harm-reduction materials explaining safer use strategies
 
-Under Ordinance 251028, such statements could be treated as proof that a product is an illegal "intoxicating" drug. This risks **silencing educators, healthcare professionals, and harm-reduction organizations**, including PSKC's own educational programs.
+Under Ordinance 251028, such statements **would be treated as proof** that a product is an illegal "intoxicating" drug. This risks **silencing educators, healthcare professionals, and harm-reduction organizations**, including PSKC's own educational programs.
 
 > "We cannot improve public health by gagging the people who are trying to educate the community. Honest information about risks and safer use should be encouraged, not criminalized."
 >
@@ -128,8 +130,8 @@ The ordinance mandates a **minimum of 15 days in jail** and up to **6 months per
 
 **In real terms, this means:**
 
-- A clerk who unknowingly continues selling kratom or Delta-8 gummies for a week could face **over three months in jail**
-- A small business owner could be **incarcerated longer than some violent offenders** for conduct involving products that remain legal at the state level
+- A clerk who unknowingly continues selling kratom or Delta-8 gummies for a week **would face over three months in jail**
+- A small business owner **would be incarcerated longer than some violent offenders** for conduct involving products that remain legal at the state level
 
 PSKC calls these penalties cruel, wasteful, and out of proportion.
 
