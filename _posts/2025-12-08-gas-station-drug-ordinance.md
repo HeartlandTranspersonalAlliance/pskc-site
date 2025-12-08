@@ -10,6 +10,7 @@ tags:
   - Harm Reduction
   - Public Health
   - Kansas City Council
+excerpt_separator: "<!--more-->"
 ---
 
 **FOR IMMEDIATE RELEASE**
@@ -18,6 +19,8 @@ December 8, 2025
 # PSKC Urges Kansas City Council to Reject "Gas Station Drug" Ordinance
 
 **KANSAS CITY, MO** – The Psychedelic Society of Kansas City (PSKC) is calling on the Kansas City Council to reject **[Ordinance 251028](https://kansascity.legistar.com/LegislationDetail.aspx?ID=7770752&GUID=E5C1CA51-B5BE-4CA4-9867-21FCEFBCA552)**, a proposal to ban a broad range of psychoactive products and chemical inhalants often labeled as "gas station drugs."
+
+<!--more-->
 
 ### What the Ordinance Would Do
 
@@ -31,7 +34,8 @@ The ordinance, introduced as a public safety measure, would:
 PSKC warns that, as written, the ordinance is overbroad, vague, and out of step with modern public health and drug policy, and risks harming small businesses, health initiatives, and vulnerable communities more than it protects anyone.
 
 > "We all want safe neighborhoods and responsible businesses. But this ordinance is a blunt instrument that swings far too wide. It would criminalize legal products, confuse business owners, chill education and harm-reduction, and revive failed War on Drugs policies that hurt communities rather than help them."
-> — **Dale Morgan, President of PSKC's Board of Directors**
+>
+> <cite>Dale Morgan, President of PSKC's Board of Directors</cite>
 
 ---
 
@@ -50,7 +54,8 @@ By outlawing any substance with a psychoactive effect "similar" to a Schedule I 
 For everyday retailers, this creates a guessing game about what is legal.
 
 > "A gas station clerk or small shop owner shouldn't need a team of lawyers and chemists to know whether selling a tea, supplement, or gummy is suddenly a jailable offense. That's not fair, and it's not how good law is supposed to work."
-> — **Dale Morgan**
+>
+> <cite>Dale Morgan</cite>
 
 #### 2. Drug Paraphernalia Ban Undermines Harm Reduction
 
@@ -63,7 +68,8 @@ The ordinance also revives a broad paraphernalia ban, targeting items "designed,
 Public health experts and national health agencies increasingly recognize that such harm-reduction tools save lives by reducing overdoses, infections, and other health harms.
 
 > "Including a broad paraphernalia ban is a huge step backward. We learned from the HIV crisis and the overdose crisis that criminalizing equipment doesn't stop drug use – it just makes it more dangerous. Kansas City should not be turning its back on decades of public health progress."
-> — **Dr. Christine Ziemer, PSKC's Executive Director**
+>
+> <cite>Dr. Christine Ziemer, PSKC's Executive Director</cite>
 
 #### 3. License Revocation Without a Conviction: A Due Process Red Flag
 
@@ -75,7 +81,8 @@ This means:
 - Immigrant-owned and small neighborhood businesses could be disproportionately impacted if they lack resources to fight license actions
 
 > "No one in Kansas City should lose their livelihood on the basis of unproven allegations. If the city can't prove a crime in court, it shouldn't be destroying a business."
-> — **Dale Morgan**
+>
+> <cite>Dale Morgan</cite>
 
 #### 4. Chilling Effect on Education and Free Speech
 
@@ -90,7 +97,8 @@ For example:
 Under Ordinance 251028, such statements could be treated as proof that a product is an illegal "intoxicating" drug. This risks silencing educators, healthcare professionals, and harm-reduction organizations, including PSKC's own educational programs.
 
 > "We cannot improve public health by gagging the people who are trying to educate the community. Honest information about risks and safer use should be encouraged, not criminalized."
-> — **Dale Morgan**
+>
+> <cite>Dale Morgan</cite>
 
 #### 5. Nitrous Oxide and "Poppers" Wrongly Lumped Together
 
@@ -114,7 +122,8 @@ In real terms, this means:
 PSKC calls these penalties cruel, wasteful, and out of proportion.
 
 > "Jailing small business employees for months over labeling issues and legal gray areas is not a smart use of taxpayer dollars or jail space. It's a throwback to the worst instincts of the War on Drugs."
-> — **Dale Morgan**
+>
+> <cite>Dale Morgan</cite>
 
 ---
 
@@ -157,7 +166,8 @@ PSKC is not denying that some unregulated products are dangerous. Instead, the o
 ## "Don't Double Down on a Failed War on Drugs Playbook"
 
 > "Our message to the City Council is simple: Don't double down on a failed War on Drugs playbook. Kansas City deserves smarter, more compassionate, and more effective solutions. We stand ready to work with city leaders on policies that truly protect public health and respect human rights. Ordinance 251028, as written, does neither. We urge you to vote No and collaborate with the community on a better path forward."
-> — **Dale Morgan, President, PSKC Board of Directors**
+>
+> <cite>Dale Morgan, President, PSKC Board of Directors</cite>
 
 ---
 
