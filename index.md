@@ -1,15 +1,15 @@
 ---
 layout: splash 
 permalink: /
-title: "We're Presenting A Conference!"
-excerpt: "Come join us this November 15th for the Kansas City Psychedelic Conference. We'll be featuring a variety of keynote speakers, panels, and interactive workshops."
+title: "Stop Mayor Lucas' New War On Drugs"
+excerpt: "Join us at City Hall on December 9th at 10:30am and share your thoughts to city council to help us reject this new drug ordinance that hinders harm reduction efforts while targeting marginalized communities."
 header:
   overlay_color: "#000"
   overlay_filter: "0.25"
-  overlay_image: /assets/images/kcpcbanner.jpg
+#  overlay_image: /assets/images/kcpcbanner.jpg
   actions:
-    - label: "Learn More"
-      url: "/kcpc/"
+    - label: "Read More"
+      url: "/gas-station-drug-ordinance/"
       class: "btn btn--primary"
 ---
 We believe in fostering thoughtful conversations and connections around these emerging fields while advocating for informed, responsible use and supporting efforts to expand awareness and access.
