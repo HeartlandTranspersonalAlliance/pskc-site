@@ -20,8 +20,6 @@ December 8, 2025
 Email: [info@psychedelickc.org](mailto:info@psychedelickc.org)<br>
 Website: [www.psychedelickc.org](https://www.psychedelickc.org)
 
----
-
 **KANSAS CITY, MO** – The Psychedelic Society of Kansas City (PSKC) is calling on the Kansas City Council to reject **[Ordinance 251028](https://kansascity.legistar.com/LegislationDetail.aspx?ID=7770752&GUID=E5C1CA51-B5BE-4CA4-9867-21FCEFBCA552)**, a proposal to ban a broad range of psychoactive products and chemical inhalants often labeled as "gas station drugs."
 
 <!--more-->
@@ -48,8 +46,6 @@ PSKC warns that, as written, the ordinance is overbroad, vague, and out of step 
 > "We all want safe neighborhoods and responsible businesses. But this ordinance is a blunt instrument that swings far too wide. It would criminalize legal products, confuse business owners, chill education and harm-reduction, and revive failed War on Drugs policies that hurt communities rather than help them."
 >
 > <cite>Dale Morgan, President of PSKC's Board of Directors</cite>
-
----
 
 ### Key Concerns with Ordinance 251028
 
@@ -139,7 +135,6 @@ PSKC calls these penalties cruel, wasteful, and out of proportion.
 >
 > <cite>Dale Morgan</cite>
 
----
 
 ### Community and Law Enforcement Concerns
 
@@ -149,14 +144,10 @@ PSKC's opposition is echoed by concerns from:
 - **Healthcare professionals and mental health advocates**, who worry that banning products like kratom and safer alternatives could push people back toward more dangerous opioids or untreated conditions
 - **LGBTQ+ community members**, who see the poppers ban as likely to invite selective enforcement in queer spaces
 
----
 
 ### A Better Path: Harm Reduction, Regulation, and Public Input
 
 PSKC is not denying that some unregulated products are dangerous. Instead, the organization is urging the Council to consider more targeted, evidence-based approaches.
-
-**PSKC's Recommendations:**
-{: .notice--success}
 
 #### 1. Targeted Regulation and Quality Control
 
@@ -177,8 +168,6 @@ PSKC is not denying that some unregulated products are dangerous. Instead, the o
 
 - Convene a **task force** including public health experts, pharmacologists, community organizations, business owners, and impacted communities
 - For major shifts in local drug policy, consider **state-level solutions** or voter-led initiatives rather than rushed, city-only bans
-
----
 
 ### PSKC's Message to City Council
 
