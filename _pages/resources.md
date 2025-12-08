@@ -13,5 +13,3 @@ The Kansas City Psychedelic Integration Circle is a confidential community cente
 
 ---
 
-### [RaveSafe Inc.](https://ravesafeinc.com)
-RaveSafe Inc. is a harm reduction, volunteer-led nonprofit that strives to provide Narcan, fentanyl test strips, and various other supplies to multiple venues in Kansas City and St. Louis.

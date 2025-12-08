@@ -15,14 +15,7 @@ tags:
 **FOR IMMEDIATE RELEASE**
 December 8, 2025
 
-**Contact:**
-Psychedelic Society of Kansas City (PSKC)
-Email: [info@psychedelickc.org](mailto:info@psychedelickc.org)
-Website: [www.psychedelickc.org](https://www.psychedelickc.org)
-
----
-
-## PSKC Urges Kansas City Council to Reject "Gas Station Drug" Ordinance
+# PSKC Urges Kansas City Council to Reject "Gas Station Drug" Ordinance
 
 **KANSAS CITY, MO** – The Psychedelic Society of Kansas City (PSKC) is calling on the Kansas City Council to reject **[Ordinance 251028](https://kansascity.legistar.com/LegislationDetail.aspx?ID=7770752&GUID=E5C1CA51-B5BE-4CA4-9867-21FCEFBCA552)**, a proposal to ban a broad range of psychoactive products and chemical inhalants often labeled as "gas station drugs."
 
@@ -42,9 +35,9 @@ PSKC warns that, as written, the ordinance is overbroad, vague, and out of step 
 
 ---
 
-## Key Concerns with Ordinance 251028
+### Key Concerns with Ordinance 251028
 
-### 1. Overbroad Definitions Put Legal Products and Small Businesses at Risk
+#### 1. Overbroad Definitions Put Legal Products and Small Businesses at Risk
 
 PSKC's first concern is that the ordinance's definitions of "novel psychoactive drugs" and "intoxicating cannabinoid products" are extremely broad and unclear.
 
@@ -59,7 +52,7 @@ For everyday retailers, this creates a guessing game about what is legal.
 > "A gas station clerk or small shop owner shouldn't need a team of lawyers and chemists to know whether selling a tea, supplement, or gummy is suddenly a jailable offense. That's not fair, and it's not how good law is supposed to work."
 > — **Dale Morgan**
 
-### 2. Drug Paraphernalia Ban Undermines Harm Reduction
+#### 2. Drug Paraphernalia Ban Undermines Harm Reduction
 
 The ordinance also revives a broad paraphernalia ban, targeting items "designed, marketed, or intended" for consuming these substances. In practice, this could impact:
 
@@ -72,7 +65,7 @@ Public health experts and national health agencies increasingly recognize that s
 > "Including a broad paraphernalia ban is a huge step backward. We learned from the HIV crisis and the overdose crisis that criminalizing equipment doesn't stop drug use – it just makes it more dangerous. Kansas City should not be turning its back on decades of public health progress."
 > — **Dr. Christine Ziemer, PSKC's Executive Director**
 
-### 3. License Revocation Without a Conviction: A Due Process Red Flag
+#### 3. License Revocation Without a Conviction: A Due Process Red Flag
 
 PSKC is especially troubled by language that allows the city to suspend or revoke a business license without a criminal conviction. Under the ordinance, a business could lose its license simply because inspectors allege that banned products were sold.
 
@@ -84,7 +77,7 @@ This means:
 > "No one in Kansas City should lose their livelihood on the basis of unproven allegations. If the city can't prove a crime in court, it shouldn't be destroying a business."
 > — **Dale Morgan**
 
-### 4. Chilling Effect on Education and Free Speech
+#### 4. Chilling Effect on Education and Free Speech
 
 The ordinance allows inspectors to treat ordinary speech and educational information as evidence of a crime.
 
@@ -99,7 +92,7 @@ Under Ordinance 251028, such statements could be treated as proof that a product
 > "We cannot improve public health by gagging the people who are trying to educate the community. Honest information about risks and safer use should be encouraged, not criminalized."
 > — **Dale Morgan**
 
-### 5. Nitrous Oxide and "Poppers" Wrongly Lumped Together
+#### 5. Nitrous Oxide and "Poppers" Wrongly Lumped Together
 
 Section 50-207 of the ordinance groups nitrous oxide (laughing gas) with amyl and butyl nitrites ("poppers") as "dangerous chemical inhalants."
 
@@ -109,7 +102,7 @@ PSKC points out that:
 - **Poppers**, while not risk-free, are relatively low-risk in moderation and are widely used in LGBTQ+ communities and nightlife settings
 - Banning the sale of poppers raises concerns about disproportionate impacts on LGBTQ+ spaces, increased policing in queer venues, and the creation of an unregulated black market
 
-### 6. Mandatory Jail Sentences for Selling Legal Products
+#### 6. Mandatory Jail Sentences for Selling Legal Products
 
 The ordinance mandates a minimum of 15 days in jail and up to 6 months per offense, plus fines up to $1,000 per day. Each day of violation counts as a separate offense.
 
@@ -125,7 +118,7 @@ PSKC calls these penalties cruel, wasteful, and out of proportion.
 
 ---
 
-## Community and Law Enforcement Concerns
+### Community and Law Enforcement Concerns
 
 PSKC's opposition is echoed by concerns from:
 
@@ -135,26 +128,26 @@ PSKC's opposition is echoed by concerns from:
 
 ---
 
-## A Better Path: Harm Reduction, Regulation, and Public Input
+### A Better Path: Harm Reduction, Regulation, and Public Input
 
 PSKC is not denying that some unregulated products are dangerous. Instead, the organization is urging the Council to consider more targeted, evidence-based approaches, including:
 
-### Targeted Regulation and Quality Control
+#### Targeted Regulation and Quality Control
 
 - Work with state lawmakers to pass measures like a Kratom Consumer Protection Act or clear regulations for hemp-derived cannabinoids
 - Require age limits, accurate labeling, warning labels, and lab testing for purity and potency
 
-### Civil, Not Criminal, Enforcement
+#### Civil, Not Criminal, Enforcement
 
 - Use fines, warnings, and license reviews for truly bad-actor businesses
 - Reserve criminal penalties for clearly fraudulent or intentionally harmful conduct, not honest mistakes or ambiguous products
 
-### Investment in Education and Harm Reduction
+#### Investment in Education and Harm Reduction
 
 - Support outreach on the real risks of substances like tianeptine or unsafe synthetic cannabinoids
 - Expand access to drug-checking tools, overdose prevention, and treatment resources
 
-### Stakeholder and Voter Input
+#### Stakeholder and Voter Input
 
 - Convene a task force including public health experts, pharmacologists, community organizations, business owners, and impacted communities
 - For major shifts in local drug policy, consider state-level solutions or voter-led initiatives rather than rushed, city-only bans
@@ -170,10 +163,9 @@ PSKC is not denying that some unregulated products are dangerous. Instead, the o
 
 ## Contact Information
 
-**Psychedelic Society of Kansas City (PSKC)**
-Board of Directors
+**Psychedelic Society of Kansas City (PSKC)** Board of Directors
+
 Email: [info@psychedelickc.org](mailto:info@psychedelickc.org)
-Phone: (816) 719-5793
 Website: [www.psychedelickc.org](https://www.psychedelickc.org)
 
 ---
@@ -181,5 +173,3 @@ Website: [www.psychedelickc.org](https://www.psychedelickc.org)
 ## About the Psychedelic Society of Kansas City
 
 The Psychedelic Society of Kansas City is a community-based, educational nonprofit dedicated to harm reduction, evidence-based drug policy, and responsible, informed use of psychoactive substances. PSKC hosts public education events, supports peer-based harm reduction initiatives, and works with community partners to promote compassionate, science-driven approaches to drug use and mental health.
-
-### # # #

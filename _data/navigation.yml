@@ -8,6 +8,8 @@ main:
   - title: "Events"
     url: /events/
  #   url: https://lu.ma/pskc
+  - title: "News"
+    url: /news/
   - title: "Resources"
     url: /resources/
   - title: "Code of Conduct"
@@ -16,8 +18,6 @@ main:
     url: /contact/
   - title: "KCPC 2025"
     url: /kcpc/
-#  - title: "News"
-#    url: /news/
  # - title: "Categories"
  #   url: /categories/
 #  - title: "Tags"
