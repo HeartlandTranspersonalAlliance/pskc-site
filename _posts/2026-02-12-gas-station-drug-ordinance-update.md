@@ -41,7 +41,7 @@ All five provisions were struck down by the committee. A modified version of the
 
 The ordinance as passed retains bans on:
 
-- **7OH**
+- **7-OH (7-Hydroxymitragynine)**
 - **Nitrous oxide**
 - **Amyl nitrates**
 
