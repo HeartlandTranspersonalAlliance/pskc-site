@@ -13,7 +13,7 @@ Usage:
 
 Environment:
   PSKC_HOST=0.0.0.0   Address nginx listens on.
-  PSKC_PORT=8080      Port nginx listens on. Use a non-root port.
+  PSKC_PORT=8090      Port nginx listens on. Use a non-root port.
   PSKC_BUILD=1        Build before serving. Set to 0 to serve existing dist/.
   PSKC_SITE_ROOT=$PWD Site root. Defaults to the current directory.
 
@@ -22,7 +22,7 @@ Examples:
   pskc-lan-preview --daemon
   pskc-lan-preview --status
   pskc-lan-preview --stop
-  PSKC_PORT=8081 pskc-lan-preview
+  PSKC_PORT=8091 pskc-lan-preview
   PSKC_BUILD=0 pskc-lan-preview
 USAGE
 }
@@ -57,7 +57,7 @@ esac
 
 site_root="$(cd "${PSKC_SITE_ROOT:-$PWD}" && pwd)"
 host="${PSKC_HOST:-0.0.0.0}"
-port="${PSKC_PORT:-8080}"
+port="${PSKC_PORT:-8090}"
 build="${PSKC_BUILD:-1}"
 dist_dir="$site_root/dist"
 
@@ -108,11 +108,18 @@ print_urls() {
       ip -o -4 addr show scope global 2>/dev/null |
         awk '{ split($4, address, "/"); print address[1] }' || true
     )"
-
-    while read -r address; do
-      [[ -n "$address" ]] && echo "  LAN:    http://$address:$port/"
-    done <<< "$addresses"
+  elif [[ -x /sbin/ifconfig ]]; then
+    addresses="$(
+      /sbin/ifconfig 2>/dev/null |
+        awk '/^[[:space:]]*inet / && $2 != "127.0.0.1" { print $2 }' || true
+    )"
+  else
+    addresses=""
   fi
+
+  while read -r address; do
+    [[ -n "$address" ]] && echo "  LAN:    http://$address:$port/"
+  done <<< "$addresses"
 }
 
 print_logs() {
@@ -134,6 +141,7 @@ close_extra_fds() {
   local fd fd_dir fd_path
 
   fd_dir="/proc/$$/fd"
+  [[ -d "$fd_dir" ]] || return 0
 
   for fd_path in "$fd_dir"/*; do
     fd="${fd_path##*/}"

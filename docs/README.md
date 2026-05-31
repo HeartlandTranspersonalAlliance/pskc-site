@@ -265,10 +265,11 @@ Run a build:
 npm run build
 ```
 
-Or through the Nix shell:
+Or through devenv:
 
 ```sh
-nix develop -c npm run build
+devenv shell
+npm run build
 ```
 
 Pushing to `main` runs `.github/workflows/astro.yml`, builds the site, and
