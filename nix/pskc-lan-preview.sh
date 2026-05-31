@@ -14,6 +14,8 @@ Usage:
 Environment:
   PSKC_HOST=0.0.0.0   Address nginx listens on.
   PSKC_PORT=8090      Port nginx listens on. Use a non-root port.
+  PSKC_BASE_PATH=/pskc-staging
+                       Base path used by the Astro build.
   PSKC_BUILD=1        Build before serving. Set to 0 to serve existing dist/.
   PSKC_SITE_ROOT=$PWD Site root. Defaults to the current directory.
 
@@ -58,8 +60,18 @@ esac
 site_root="$(cd "${PSKC_SITE_ROOT:-$PWD}" && pwd)"
 host="${PSKC_HOST:-0.0.0.0}"
 port="${PSKC_PORT:-8090}"
+base_path="${PSKC_BASE_PATH:-/pskc-staging}"
 build="${PSKC_BUILD:-1}"
 dist_dir="$site_root/dist"
+
+if [[ -n "$base_path" ]]; then
+  base_path="/${base_path#/}"
+  base_path="${base_path%/}"
+
+  if [[ "$base_path" == "/" ]]; then
+    base_path=""
+  fi
+fi
 
 if [[ ! -f "$site_root/package.json" || ! -f "$site_root/astro.config.mjs" ]]; then
   echo "error: $site_root does not look like the PSKC Astro site root" >&2
@@ -97,10 +109,12 @@ running_pid() {
 }
 
 print_urls() {
-  echo "  Local:  http://127.0.0.1:$port/"
+  local preview_path="${base_path:-}/"
+
+  echo "  Local:  http://127.0.0.1:$port$preview_path"
 
   if [[ "$host" != "0.0.0.0" && "$host" != "127.0.0.1" ]]; then
-    echo "  Host:   http://$host:$port/"
+    echo "  Host:   http://$host:$port$preview_path"
   fi
 
   if command -v ip >/dev/null 2>&1; then
@@ -118,7 +132,7 @@ print_urls() {
   fi
 
   while read -r address; do
-    [[ -n "$address" ]] && echo "  LAN:    http://$address:$port/"
+    [[ -n "$address" ]] && echo "  LAN:    http://$address:$port$preview_path"
   done <<< "$addresses"
 }
 
@@ -154,6 +168,32 @@ close_extra_fds() {
 write_config() {
   nginx_prefix="$(dirname "$(dirname "$(command -v nginx)")")"
   mime_types="$nginx_prefix/conf/mime.types"
+  base_locations=""
+
+  if [[ -n "$base_path" ]]; then
+    base_locations="$(cat <<EOF
+    location = / {
+      return 302 $base_path/;
+    }
+
+    location = $base_path {
+      return 302 $base_path/;
+    }
+
+    location ^~ $base_path/ {
+      rewrite ^$base_path/(.*)$ /\$1 break;
+      try_files \$uri \$uri/index.html \$uri.html /404.html;
+    }
+EOF
+)"
+  else
+    base_locations="$(cat <<'EOF'
+    location / {
+      try_files $uri $uri/index.html $uri.html /404.html;
+    }
+EOF
+)"
+  fi
 
   cat > "$conf_file" <<EOF
 worker_processes 1;
@@ -189,9 +229,7 @@ http {
     index index.html;
     absolute_redirect off;
 
-    location / {
-      try_files \$uri \$uri/index.html \$uri.html /404.html;
-    }
+$base_locations
 
     error_page 404 /404.html;
 
