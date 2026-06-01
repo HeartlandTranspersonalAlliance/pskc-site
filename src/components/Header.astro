@@ -1,6 +1,5 @@
 ---
 import Button from "./Button.astro";
-import Icon from "./Icon.astro";
 import { navItems, site } from "../data/site";
 import { stripBase, withBase } from "../utils/urls";
 
@@ -30,18 +29,6 @@ const isActive = (href: string) =>
     </nav>
 
     <div class="header-controls">
-      <button
-        class="theme-toggle"
-        type="button"
-        data-theme-toggle
-        aria-label="Switch color theme"
-        aria-pressed="false"
-        title="Toggle dark mode"
-      >
-        <Icon name="sun" class="theme-toggle__sun" />
-        <Icon name="moon" class="theme-toggle__moon" />
-      </button>
-
       <div class="header-action">
         <Button href={site.discord} variant="primary">Join Discord</Button>
       </div>

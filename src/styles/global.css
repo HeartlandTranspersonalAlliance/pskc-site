@@ -364,49 +364,6 @@ html[data-theme="dark"] .button--outline:hover {
   display: none;
 }
 
-.theme-toggle {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-content: center;
-  border: 1px solid rgba(246, 243, 233, 0.32);
-  border-radius: 8px;
-  background: rgba(246, 243, 233, 0.08);
-  color: var(--header-text);
-  cursor: pointer;
-  transition:
-    background 180ms ease,
-    color 180ms ease;
-}
-
-.theme-toggle:hover {
-  background: rgba(239, 199, 94, 0.16);
-  color: var(--gold);
-}
-
-.theme-toggle .icon {
-  grid-area: 1 / 1;
-  font-size: 1.1rem;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
-}
-
-.theme-toggle__moon {
-  opacity: 0;
-  transform: scale(0.72) rotate(-18deg);
-}
-
-html[data-theme="dark"] .theme-toggle__sun {
-  opacity: 0;
-  transform: scale(0.72) rotate(18deg);
-}
-
-html[data-theme="dark"] .theme-toggle__moon {
-  opacity: 1;
-  transform: scale(1) rotate(0deg);
-}
-
 .mobile-menu {
   justify-self: end;
   position: relative;
