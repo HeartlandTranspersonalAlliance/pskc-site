@@ -84,6 +84,10 @@ html {
   scroll-behavior: smooth;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -116,6 +120,20 @@ button,
 input,
 textarea {
   font: inherit;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(1.4rem);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal][data-revealed] {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 :focus-visible {
@@ -1152,11 +1170,23 @@ html[data-theme="dark"] .policy-toc a {
 }
 
 .calendar-panel {
+  position: relative;
+  overflow: hidden;
   padding: 20px;
   background: var(--surface-strong);
 }
 
+.calendar-panel__placeholder {
+  position: absolute;
+  inset: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .luma-frame {
+  position: relative;
   width: 100%;
   min-height: 560px;
   border: 1px solid var(--line);
@@ -1165,7 +1195,10 @@ html[data-theme="dark"] .policy-toc a {
 }
 
 html[data-theme="dark"] .luma-frame {
-  background: #ffffff;
+  border-color: rgba(239, 199, 94, 0.36);
+  background:
+    linear-gradient(135deg, rgba(239, 199, 94, 0.08), transparent 42%),
+    #ffffff;
   filter: invert(0.88) hue-rotate(180deg) saturate(0.9);
 }
 
@@ -1631,5 +1664,13 @@ html[data-theme="dark"] .schedule-time {
 
   .footer-socials {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

@@ -99,5 +99,55 @@ const openGraphImage = new URL(withBase(image), siteOrigin).toString();
         });
       })();
     </script>
+    <script is:inline>
+      (() => {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const selectors = [
+          "main > section",
+          ".hero-content > *",
+          ".section-heading",
+          ".feature-card",
+          ".resource-card",
+          ".news-card",
+          ".contact-card",
+          ".event-mini-card",
+          ".event-list-card",
+          ".tier-card",
+          ".timeline-card",
+          ".image-gallery figure",
+          ".calendar-panel"
+        ];
+
+        const reveal = () => {
+          if (reduceMotion.matches) return;
+          const targets = Array.from(document.querySelectorAll(selectors.join(",")));
+          targets.forEach((target) => target.setAttribute("data-reveal", ""));
+          if (!("IntersectionObserver" in window)) {
+            targets.forEach((target) => target.setAttribute("data-revealed", ""));
+            return;
+          }
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.setAttribute("data-revealed", "");
+                observer.unobserve(entry.target);
+              });
+            },
+            { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+          );
+          targets.forEach((target, index) => {
+            target.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 70}ms`);
+            observer.observe(target);
+          });
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", reveal, { once: true });
+        } else {
+          reveal();
+        }
+      })();
+    </script>
   </body>
 </html>
