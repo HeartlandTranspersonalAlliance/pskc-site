@@ -125,7 +125,7 @@ const pageTransition = {
             { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
           );
           targets.forEach((target, index) => {
-            target.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 70}ms`);
+            target.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 100}ms`);
             observer.observe(target);
           });
         };
