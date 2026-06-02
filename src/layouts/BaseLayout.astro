@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 import { site } from "../data/site";
 import { stripBase, withBase } from "../utils/urls";
 import "../styles/global.css";
@@ -22,6 +23,36 @@ const pageTitle = title ? `${title} | ${site.title}` : site.title;
 const siteOrigin = Astro.site ?? new URL(site.url);
 const canonical = new URL(withBase(stripBase(Astro.url.pathname)), siteOrigin).toString();
 const openGraphImage = new URL(withBase(image), siteOrigin).toString();
+const pageTransition = {
+  forwards: {
+    old: {
+      name: "pskc-page-exit",
+      duration: "180ms",
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      fillMode: "both",
+    },
+    new: {
+      name: "pskc-page-enter",
+      duration: "210ms",
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      fillMode: "both",
+    },
+  },
+  backwards: {
+    old: {
+      name: "pskc-page-exit",
+      duration: "180ms",
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      fillMode: "both",
+    },
+    new: {
+      name: "pskc-page-enter",
+      duration: "210ms",
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      fillMode: "both",
+    },
+  },
+};
 ---
 
 <!doctype html>
@@ -43,8 +74,9 @@ const openGraphImage = new URL(withBase(image), siteOrigin).toString();
     <link rel="shortcut icon" href={withBase("/assets/images/favicon.ico")} />
     <link rel="apple-touch-icon" sizes="180x180" href={withBase("/assets/images/apple-touch-icon.png")} />
     <link rel="manifest" href={withBase("/assets/images/site.webmanifest")} />
+    <ClientRouter fallback="animate" />
   </head>
-  <body>
+  <body transition:animate={pageTransition} transition:name="page">
     <Header />
     <main>
       <slot />
@@ -69,15 +101,20 @@ const openGraphImage = new URL(withBase(image), siteOrigin).toString();
           ".calendar-panel"
         ];
 
+        let observer;
+
         const reveal = () => {
+          observer?.disconnect();
           if (reduceMotion.matches) return;
           const targets = Array.from(document.querySelectorAll(selectors.join(",")));
-          targets.forEach((target) => target.setAttribute("data-reveal", ""));
+          targets.forEach((target) => {
+            target.setAttribute("data-reveal", "");
+          });
           if (!("IntersectionObserver" in window)) {
             targets.forEach((target) => target.setAttribute("data-revealed", ""));
             return;
           }
-          const observer = new IntersectionObserver(
+          observer = new IntersectionObserver(
             (entries) => {
               entries.forEach((entry) => {
                 if (!entry.isIntersecting) return;
@@ -98,6 +135,7 @@ const openGraphImage = new URL(withBase(image), siteOrigin).toString();
         } else {
           reveal();
         }
+        document.addEventListener("astro:page-load", reveal);
       })();
     </script>
   </body>
