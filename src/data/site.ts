@@ -1,7 +1,7 @@
 export const site = {
   title: "Psychedelic Society of Kansas City",
   shortTitle: "PSKC",
-  url: "https://heartlandtranspersonalalliance.github.io/pskc-staging/",
+  url: "https://psychedelickc.org/",
   email: "info@psychedelickc.org",
   description:
     "The Psychedelic Society of Kansas City is a social and educational community hub that discusses the intersection of psychedelics in art, culture, and medicine.",

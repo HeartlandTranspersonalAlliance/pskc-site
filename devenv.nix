@@ -9,6 +9,7 @@ let
       pkgs.gawk
       pkgs.gnugrep
       pkgs.gnused
+      pkgs.lsof
       pkgs.nginx
       pkgs.nodejs_24
     ] ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [
@@ -22,6 +23,7 @@ in
 
   packages = [
     pkgs.nginx
+    pkgs.lsof
     pkgs.nodejs_24
     pskcLanPreview
   ] ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [

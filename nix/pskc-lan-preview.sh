@@ -14,7 +14,7 @@ Usage:
 Environment:
   PSKC_HOST=0.0.0.0   Address nginx listens on.
   PSKC_PORT=8090      Port nginx listens on. Use a non-root port.
-  PSKC_BASE_PATH=/pskc-staging
+  PSKC_BASE_PATH=
                        Base path used by the Astro build.
   PSKC_BUILD=1        Build before serving. Set to 0 to serve existing dist/.
   PSKC_SITE_ROOT=$PWD Site root. Defaults to the current directory.
@@ -60,7 +60,7 @@ esac
 site_root="$(cd "${PSKC_SITE_ROOT:-$PWD}" && pwd)"
 host="${PSKC_HOST:-0.0.0.0}"
 port="${PSKC_PORT:-8090}"
-base_path="${PSKC_BASE_PATH:-/pskc-staging}"
+base_path="${PSKC_BASE_PATH:-}"
 build="${PSKC_BUILD:-1}"
 dist_dir="$site_root/dist"
 
@@ -106,6 +106,28 @@ running_pid() {
   fi
 
   return 1
+}
+
+port_in_use() {
+  if command -v lsof >/dev/null 2>&1; then
+    lsof -nP -iTCP:"$port" -sTCP:LISTEN -t 2>/dev/null | grep -q .
+    return $?
+  fi
+
+  if command -v ss >/dev/null 2>&1; then
+    ss -H -ltn "sport = :$port" 2>/dev/null | grep -q .
+    return $?
+  fi
+
+  return 1
+}
+
+check_port_available() {
+  if port_in_use; then
+    echo "error: PSKC nginx preview cannot start: $host:$port is already in use" >&2
+    echo "       stop the process using that port or choose another port with PSKC_PORT=$((port + 1))." >&2
+    exit 1
+  fi
 }
 
 print_urls() {
@@ -311,6 +333,8 @@ if pid="$(running_pid)"; then
 fi
 
 rm -f "$pid_file"
+
+check_port_available
 
 write_config
 

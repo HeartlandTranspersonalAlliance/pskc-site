@@ -5,8 +5,7 @@ import icon from "astro-icon";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://heartlandtranspersonalalliance.github.io",
-  base: "/pskc-staging",
+  site: "https://psychedelickc.org",
   trailingSlash: "always",
   integrations: [
     sitemap(),

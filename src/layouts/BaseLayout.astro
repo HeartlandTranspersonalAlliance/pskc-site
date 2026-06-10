@@ -103,11 +103,22 @@ const pageTransition = {
 
         let observer;
 
+        const isInViewport = (target) => {
+          const rect = target.getBoundingClientRect();
+          return rect.top < window.innerHeight * 0.92 && rect.bottom > window.innerHeight * 0.08;
+        };
+
         const reveal = () => {
           observer?.disconnect();
           if (reduceMotion.matches) return;
           const targets = Array.from(document.querySelectorAll(selectors.join(",")));
-          targets.forEach((target) => {
+          targets.forEach((target, index) => {
+            target.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 100}ms`);
+            if (isInViewport(target)) {
+              target.setAttribute("data-revealed", "");
+            } else {
+              target.removeAttribute("data-revealed");
+            }
             target.setAttribute("data-reveal", "");
           });
           if (!("IntersectionObserver" in window)) {
@@ -124,8 +135,7 @@ const pageTransition = {
             },
             { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
           );
-          targets.forEach((target, index) => {
-            target.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 100}ms`);
+          targets.forEach((target) => {
             observer.observe(target);
           });
         };
