@@ -20,7 +20,7 @@ export const navItems = [
   { title: "Membership", href: "/membership/" },
   { title: "About", href: "/about/" },
   { title: "Contact Us", href: "/contact/" },
-  { title: "KCPC 2025", href: "/kcpc/" },
+  { title: "KCPC 2026", href: "/kcpc/" },
 ];
 
 export const socialLinks = [

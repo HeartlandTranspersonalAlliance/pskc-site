@@ -97,24 +97,95 @@ const tracks = [
   { title: "MIND Track", icon: "book", items: mindSchedule },
   { title: "BODY Track", icon: "spark", items: bodySchedule },
 ];
+
+const kcpc2025Gallery = [
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-03.jpg",
+    alt: "KCPC 2025 attendees gathered in conversation",
+    title: "Connection in every room",
+  },
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-07.jpg",
+    alt: "Attendees moving together during a KCPC 2025 workshop",
+    title: "Movement and play",
+  },
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-10.jpg",
+    alt: "Audience gathered for a talk at KCPC 2025",
+    title: "A room full of questions",
+  },
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-15.jpg",
+    alt: "Panelists speaking on stage at KCPC 2025",
+    title: "Learning together",
+  },
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-19.jpg",
+    alt: "Attendees resting during a guided KCPC 2025 workshop",
+    title: "Space to slow down",
+  },
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-21.jpg",
+    alt: "KCPC 2025 integration panel on stage",
+    title: "Many perspectives, one community",
+  },
+];
 ---
 
 <BaseLayout
   title="Kansas City Psychedelic Conference"
-  description="KCPC brings together psychedelic leaders, practitioners, advocates, and voices from the Kansas City community."
+  description="Kansas City Psychedelic Conference 2026 is November 21 at the Zhou B Art Building, featuring Rick Strassman, author of DMT: The Spirit Molecule."
 >
   <Hero
-    eyebrow="KCPC 2025"
+    eyebrow="KCPC 2026 · Saturday, November 21"
     titleLines={["Kansas City", "Psychedelic", "Conference"]}
-    intro="KCPC brings together psychedelic leaders, practitioners, and advocates from across the nation as well as voices from the Kansas City community."
-    image="/assets/images/kcpcbanner.jpg"
-    imageAlt="Abstract KCPC mandala artwork for the Kansas City Psychedelic Conference"
+    intro="A full day of psychedelic science, culture, and community with featured guest Rick Strassman, author of DMT: The Spirit Molecule."
+    image="/assets/images/kcpc2025/kcpc-2025-14.jpg"
+    imageAlt="Audience listening to a speaker at the 2025 Kansas City Psychedelic Conference"
   >
-    <Button slot="actions" href="https://luma.com/gkp6hqyd" variant="primary">Conference Registration</Button>
+    <Button slot="actions" href="https://luma.com/kcpc2026" variant="primary">Tickets · Coming Soon</Button>
+    <Button slot="actions" href="#event-details" variant="secondary">Event details</Button>
     <Button slot="actions" href="https://forms.gle/kixvX9AdE5NzSDaX8" variant="secondary">
       Sponsor or Vendor
     </Button>
   </Hero>
+
+  <Section id="event-details" tone="mist" eyebrow="Announcing KCPC 2026" title="Save Saturday, November 21, 2026." intro="Meet us at the Zhou B Art Building from 9:00 AM to 5:00 PM for a day built around curiosity, care, and connection.">
+    <CardGrid columns="four">
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">When</p>
+        <h3>9:00 AM–5:00 PM</h3>
+        <p>Saturday, November 21, 2026.</p>
+      </article>
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">Where</p>
+        <h3>Zhou B Art Building</h3>
+        <p>Join the Kansas City psychedelic community in an art-filled, human-scale setting.</p>
+      </article>
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">Featured guest</p>
+        <h3>Rick Strassman</h3>
+        <p>Author of <em>DMT: The Spirit Molecule</em>.</p>
+      </article>
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">VIP experience</p>
+        <h3>After party access</h3>
+        <p>VIP tickets include access to the KCPC 2026 after party.</p>
+      </article>
+    </CardGrid>
+    <div class="kcpc-cta-strip">
+      <div>
+        <p class="eyebrow">Tickets</p>
+        <p>Ticket sales are being finalized. Use the placeholder link below for now; it will be replaced with the live Lu.ma checkout when tickets open.</p>
+      </div>
+      <Button href="https://luma.com/kcpc2026" variant="primary">Open ticket link</Button>
+    </div>
+  </Section>
+
+  <Section eyebrow="KCPC 2025 · In pictures" title="This is what last year felt like." intro="From packed talks to movement, integration, and hallway conversations, the 2025 gathering made room for many ways to participate."
+  >
+    <ImageGallery images={kcpc2025Gallery} columns="three" />
+  </Section>
 
   <Section eyebrow="Explore" title="Science, integration, policy, and embodied practice.">
     <div class="kcpc-cta-strip">

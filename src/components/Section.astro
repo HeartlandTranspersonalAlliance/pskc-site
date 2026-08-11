@@ -1,5 +1,6 @@
 ---
 interface Props {
+  id?: string;
   eyebrow?: string;
   title?: string;
   intro?: string;
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const {
+  id,
   eyebrow,
   title,
   intro,
@@ -17,7 +19,7 @@ const {
 
 ---
 
-<section class:list={["section-band", `section-tone-${tone}`, className]}>
+<section id={id} class:list={["section-band", `section-tone-${tone}`, className]}>
   <div class="site-container">
     {(eyebrow || title || intro) && (
       <div class="section-heading">
