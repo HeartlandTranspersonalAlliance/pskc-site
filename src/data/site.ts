@@ -5,9 +5,10 @@ export const site = {
   email: "info@psychedelickc.org",
   description:
     "The Psychedelic Society of Kansas City is a social and educational community hub that discusses the intersection of psychedelics in art, culture, and medicine.",
-  discord: "https://discord.gg/ds5NYqqBKU",
+  discord: "https://discord.gg/KQXE5X4ezx",
   luma: "https://lu.ma/pskc",
-  donate: "https://givebutter.com/pskc",
+  donate:
+    "https://www.zeffy.com/en-US/donation-form/support-the-psychedelic-society-of-kansas-city-championing-education-and-community-engagement-2",
   patreon: "https://www.patreon.com/c/PSKC",
   linksHub: "https://links.psychedelickc.org",
 };
@@ -24,7 +25,7 @@ export const navItems = [
 ];
 
 export const socialLinks = [
-  { label: "Discord", href: "https://discord.gg/ds5NYqqBKU", icon: "discord" },
+  { label: "Discord", href: "https://discord.gg/KQXE5X4ezx", icon: "discord" },
   {
     label: "Instagram",
     href: "https://instagram.com/psychedelicsocietyofkansascity",
