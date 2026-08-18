@@ -17,7 +17,7 @@ import { withBase } from "../utils/urls";
     compact
     eyebrow="Events"
     titleLines={["Upcoming", "gatherings."]}
-    intro="PSKC hosts public education events, monthly meetups, and community gatherings across Kansas City."
+    intro="PSKC hosts monthly gatherings for community education, engagement, integration, and peer support across Kansas City."
     image="/assets/images/kcpcbanner.jpg"
     imageAlt="Abstract KCPC mandala artwork used for PSKC event pages"
   >
@@ -25,25 +25,25 @@ import { withBase } from "../utils/urls";
     <Button slot="actions" href={site.luma} variant="secondary">Subscribe on Lu.ma</Button>
   </Hero>
 
-  <Section eyebrow="Calendar" title="Upcoming events">
+  <Section eyebrow="Calendar" title="Upcoming gatherings" intro="Monthly events are designed for learning, conversation, and community care.">
     <div class="event-mini-grid" aria-label="PSKC event focus areas">
       <a class="event-mini-card" href={site.luma} target="_blank" rel="noopener noreferrer">
         <Icon name="calendar" />
         <div>
-          <h3 class="font-black">Monthly meetups</h3>
-          <p>Public talks, panels, and peer conversation around psychedelic education and community care.</p>
+          <h3 class="font-black">Community education and engagement</h3>
+          <p>Monthly events for accessible education, conversation, and connection across Kansas City's psychedelic community.</p>
         </div>
       </a>
       <a class="event-mini-card" href={site.luma} target="_blank" rel="noopener noreferrer">
         <Icon name="users" />
         <div>
-          <h3 class="font-black">Community gatherings</h3>
-          <p>Low-barrier ways to meet local organizers, practitioners, advocates, artists, and curious newcomers.</p>
+          <h3 class="font-black">Integration and peer support</h3>
+          <p>A private, confidential space to share, reflect, and connect with community support.</p>
         </div>
       </a>
     </div>
 
-    <div class="example-event-list" aria-label="Example event listings">
+    <div class="example-event-list" aria-label="Monthly event formats">
       {exampleEvents.map((event) => (
         <a class="event-list-card" href={site.luma} target="_blank" rel="noopener noreferrer" aria-label={`View PSKC events for ${event.title}`}>
           <Icon name={event.icon} />
@@ -80,5 +80,14 @@ import { withBase } from "../utils/urls";
         Open the PSKC Lu.ma calendar.
       </a>
     </p>
+  </Section>
+
+  <Section tone="mist" eyebrow="Policy action" title="Support psychedelic access in Missouri." intro="For statewide advocacy and public policy work, follow the Psychedelic Missouri campaign and super PAC.">
+    <article class="feature-card">
+      <div class="card-icon"><Icon name="policy" /></div>
+      <h3>Psychedelic Missouri</h3>
+      <p>Learn about efforts to create legal psychedelic access for Missourians and connect with the statewide movement.</p>
+      <Button href="https://www.psychedelicmissouri.com/" variant="primary">Visit Psychedelic Missouri</Button>
+    </article>
   </Section>
 </BaseLayout>

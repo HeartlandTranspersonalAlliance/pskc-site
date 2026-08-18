@@ -1,20 +1,14 @@
 export const exampleEvents = [
   {
     label: "Monthly format",
-    title: "Community Education Night",
-    body: "A sample event card for talks, Q&A, and peer conversation around psychedelic science, culture, and harm reduction.",
-    icon: "book",
+    title: "Community education and engagement",
+    body: "Monthly gatherings for accessible education, conversation, and connection across Kansas City's psychedelic community.",
+    icon: "users",
   },
   {
-    label: "Monthly format",
-    title: "Integration and Peer Support Meetup",
-    body: "A sample event card for low-pressure community connection, reflection, and resource sharing.",
+    label: "Private community support",
+    title: "Integration and peer support",
+    body: "A private, confidential setting to share experiences, reflect, and find peer support without pressure to perform or explain.",
     icon: "heart",
-  },
-  {
-    label: "Special program",
-    title: "Policy and Public Health Forum",
-    body: "A sample event card for local policy updates, public comment preparation, and evidence-aware advocacy.",
-    icon: "policy",
   },
 ];

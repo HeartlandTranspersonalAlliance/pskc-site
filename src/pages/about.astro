@@ -46,21 +46,21 @@ const timeline = [
   },
 ];
 
-const examplePhotos = [
+const pastEvents = [
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-20.jpg",
+    alt: "Audience listening during the 2025 Kansas City Psychedelic Conference",
+    title: "Kansas City Psychedelic Conference, 2025",
+  },
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-16.jpg",
+    alt: "Vendor and sponsor exhibits at the 2025 Kansas City Psychedelic Conference",
+    title: "Vendor and sponsor exhibits",
+  },
   {
     src: "/assets/images/events/tiedye-your-pride-2025.jpg",
     alt: "PSKC community members and performers posing together at the Tiedye Your Pride event in 2025",
     title: "Tiedye Your Pride, 2025",
-  },
-  {
-    src: "/assets/images/examples/volunteer-table.svg",
-    alt: "Example illustration of volunteers organizing materials at a PSKC resource table",
-    title: "Example volunteer table visual",
-  },
-  {
-    src: "/assets/images/examples/team-planning.svg",
-    alt: "Example illustration of a PSKC planning session with a shared board",
-    title: "Example team planning visual",
   },
 ];
 ---
@@ -110,10 +110,6 @@ const examplePhotos = [
     </div>
   </Section>
 
-  <Section eyebrow="Example Visuals" title="Replaceable assets for people-centered storytelling.">
-    <ImageGallery images={examplePhotos} columns="three" />
-  </Section>
-
   <Section eyebrow="What We Do" title="Practical ways PSKC gathers people.">
     <CardGrid columns="three">
       {workCards.map((card) => (
@@ -127,5 +123,9 @@ const examplePhotos = [
         </article>
       ))}
     </CardGrid>
+  </Section>
+
+  <Section eyebrow="Past Events" title="Community work in practice." intro="A look back at gatherings that have shaped PSKC's local community.">
+    <ImageGallery images={pastEvents} columns="three" />
   </Section>
 </BaseLayout>

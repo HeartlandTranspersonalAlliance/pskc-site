@@ -1516,17 +1516,18 @@ html[data-theme="dark"] .schedule-time {
   .split-band,
   .footer-grid,
   .policy-grid {
-    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
   }
 
   .policy-toc {
     position: sticky;
     top: 96px;
-    order: 2;
+    order: 1;
   }
 
   .policy-content {
-    order: 1;
+    order: 2;
+    max-width: 860px;
   }
 
   .schedule-grid {
