@@ -6,6 +6,7 @@ interface GalleryImage {
   src: string;
   alt: string;
   title?: string;
+  description?: string;
 }
 
 interface Props {
@@ -28,6 +29,7 @@ const columnClasses = {
         <>
           <img src={withBase(image.src)} alt={image.alt} loading="lazy" />
           {image.title && <p>{image.title}</p>}
+          {image.description && <small>{image.description}</small>}
         </>
       );
 

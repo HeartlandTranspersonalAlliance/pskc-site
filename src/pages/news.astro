@@ -16,13 +16,13 @@ const categories = Array.from(new Set(posts.flatMap((post) => post.data.categori
     compact
     eyebrow="News"
     titleLines={["Public", "updates."]}
-    intro="Press releases, policy notes, and public education updates from PSKC."
+    intro="Public statements, policy notes, and community updates from PSKC."
     image="/assets/images/PSKC%20FB_BANNER-01.jpeg"
     imageAlt="Kansas City skyline illustration with PSKC geometric artwork"
     tone="warm"
   />
 
-  <Section eyebrow="Latest" title="News and advocacy notes">
+  <Section eyebrow="Latest" title="Public updates and advocacy">
     <div class="filter-row" aria-label="Filter news by category">
       <button class="active" type="button" data-news-filter="all">All</button>
       {categories.map((category) => (

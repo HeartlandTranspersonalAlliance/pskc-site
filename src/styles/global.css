@@ -941,7 +941,7 @@ html[data-theme="dark"] .tag-row span {
 
 .image-gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   background: var(--mist);
 }
@@ -951,6 +951,16 @@ html[data-theme="dark"] .tag-row span {
   object-fit: contain;
   padding: 22px;
   background: #ffffff;
+}
+
+.image-gallery figure small,
+.image-gallery a small {
+  display: block;
+  margin-top: -12px;
+  padding: 0 16px 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .image-gallery--logo a,

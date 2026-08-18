@@ -18,7 +18,6 @@ export const navItems = [
   { title: "Events", href: "/events/" },
   { title: "Resources", href: "/resources/" },
   { title: "Code of Conduct", href: "/coc/" },
-  { title: "Membership", href: "/membership/" },
   { title: "About", href: "/about/" },
   { title: "Contact Us", href: "/contact/" },
   { title: "KCPC 2026", href: "/kcpc/" },

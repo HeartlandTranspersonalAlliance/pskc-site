@@ -9,7 +9,9 @@ export default defineConfig({
   base: "/pskc-staging",
   trailingSlash: "always",
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.endsWith("/membership/"),
+    }),
     icon({
       include: {
         tabler: ["*"],

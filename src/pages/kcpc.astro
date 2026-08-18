@@ -7,22 +7,7 @@ import Icon from "../components/Icon.astro";
 import Section from "../components/Section.astro";
 import Hero from "../components/Hero.astro";
 
-const visionarySponsors = [
-  {
-    href: "https://alicecbd.com/",
-    src: "/assets/images/kcpc/alicecbd.jpg",
-    alt: "alice RN Nutraceutical logo",
-    title: "aliceCBD and alice RN Nutraceutical",
-  },
-];
-
 const trailblazerSponsors = [
-  {
-    href: "https://www.hummingbirdhealthcare.com/",
-    src: "/assets/images/kcpc/hummingbird.jpg",
-    alt: "Hummingbird Healthcare logo",
-    title: "Hummingbird Healthcare",
-  },
   {
     href: "https://www.evolution-mag.com/",
     src: "/assets/images/kcpc/evolution.jpg",
@@ -56,34 +41,35 @@ const programFocusItems = [
 
 const kcpc2025Gallery = [
   {
-    src: "/assets/images/kcpc2025/kcpc-2025-03.jpg",
-    alt: "KCPC 2025 attendees gathered in conversation",
-    title: "Connection in every room",
+    src: "/assets/images/kcpc2025/kcpc-2025-16.jpg",
+    alt: "KCPC 2025 exhibitor table with handmade jewelry and community materials",
+    title: "Lectures & Q&A",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-07.jpg",
     alt: "Attendees moving together during a KCPC 2025 workshop",
     title: "Movement and play",
+    description: "Somatic workshops, ecstatic dance, and ceremony.",
   },
   {
-    src: "/assets/images/kcpc2025/kcpc-2025-10.jpg",
-    alt: "Audience gathered for a talk at KCPC 2025",
-    title: "A room full of questions",
+    src: "/assets/images/kcpc2025/kcpc-2025-09.jpg",
+    alt: "KCPC 2025 attendees connecting near community tables",
+    title: "Aligned organizations and causes",
   },
   {
-    src: "/assets/images/kcpc2025/kcpc-2025-15.jpg",
-    alt: "Panelists speaking on stage at KCPC 2025",
-    title: "Learning together",
+    src: "/assets/images/kcpc2025/kcpc-2025-12.jpg",
+    alt: "KCPC 2025 vendor displaying handmade jewelry and goods",
+    title: "Vendor & Sponsor Exhibits",
+  },
+  {
+    src: "/assets/images/kcpc2025/kcpc-2025-18.jpg",
+    alt: "Audience seated for a presentation at KCPC 2025",
+    title: "A space to slow down and go inward",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-19.jpg",
-    alt: "Attendees resting during a guided KCPC 2025 workshop",
-    title: "Space to slow down",
-  },
-  {
-    src: "/assets/images/kcpc2025/kcpc-2025-21.jpg",
-    alt: "KCPC 2025 integration panel on stage",
-    title: "Many perspectives, one community",
+    alt: "KCPC 2025 attendees resting on cushions during a guided session",
+    title: "Unique community discussion panels",
   },
 ];
 ---
@@ -155,7 +141,7 @@ const kcpc2025Gallery = [
       <article class="feature-card conference-topic">
         <p class="eyebrow">The premise</p>
         <h3>Beyond the known</h3>
-        <p>A focused look at the edges of current understanding.</p>
+        <p>Learn about cutting-edge psychedelic science developments and discoveries.</p>
       </article>
       <article class="feature-card conference-topic">
         <p class="eyebrow">The conversation</p>
@@ -164,8 +150,8 @@ const kcpc2025Gallery = [
       </article>
       <article class="feature-card conference-topic">
         <p class="eyebrow">The format</p>
-        <h3>Research and exchange</h3>
-        <p>Lectures, conversation, and community across one full day.</p>
+        <h3>Mind and Body stages</h3>
+        <p>Mind brings lectures, panels, and Q&A. Body brings somatic workshops, ecstatic dance, meditation, and ceremony.</p>
       </article>
     </CardGrid>
   </Section>
@@ -174,11 +160,11 @@ const kcpc2025Gallery = [
     <div class="split-band">
       <div>
         <p class="eyebrow">A long view</p>
-        <p class="text-xl leading-relaxed">Dr. Strassman’s DMT studies at the University of New Mexico in the early 1990s helped reopen the door to human psychedelic research in the United States.</p>
+        <p class="text-xl leading-relaxed">Dr. Strassman’s DMT studies at the University of New Mexico in the early 1990s helped reopen the door to human psychedelic research in the United States. He later wrote <em>DMT: The Spirit Molecule</em>, the landmark book that brought this work to a wider audience.</p>
       </div>
       <div>
         <p class="eyebrow">On the program</p>
-        <p class="text-xl leading-relaxed">His keynote will set the frame for a day about consciousness, psychedelic science, healing, spirituality, and transpersonal experience.</p>
+        <p class="text-xl leading-relaxed">His keynote will set the tone for the day’s Mind and Body conversations, alongside psychedelic art, interactive activations, a gallery, and a raffle supporting Safe Journey Sanctum.</p>
       </div>
     </div>
   </Section>
@@ -192,7 +178,7 @@ const kcpc2025Gallery = [
     <CardGrid columns="three">
       <article class="feature-card conference-topic">
         <p class="eyebrow">Volunteer</p>
-        <h3>Help produce the day.</h3>
+        <h3>Want to help out?</h3>
         <p>Contribute time, skills, or resources to the KCPC team.</p>
         <Button href="https://forms.gle/uPzrdhrb62ZEaLwD7" variant="secondary">Volunteer form</Button>
       </article>
@@ -229,11 +215,7 @@ const kcpc2025Gallery = [
   <Section eyebrow="Special Thanks" title="KCPC sponsors make this possible.">
     <div class="space-y-12">
       <div>
-        <h2 class="sponsor-heading">Visionary Sponsor</h2>
-        <ImageGallery images={visionarySponsors} columns="three" variant="logo" />
-      </div>
-      <div>
-        <h2 class="sponsor-heading">Trailblazer Sponsors</h2>
+        <h2 class="sponsor-heading">KCPC 2026 After Party Sponsor</h2>
         <ImageGallery images={trailblazerSponsors} variant="logo" />
       </div>
     </div>
