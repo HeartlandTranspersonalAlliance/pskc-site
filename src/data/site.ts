@@ -43,7 +43,7 @@ export const socialLinks = [
   { label: "Patreon", href: "https://www.patreon.com/c/PSKC", icon: "patreon" },
   {
     label: "GitHub",
-    href: "https://github.com/HeartlandTranspersonalAlliance/pskc-staging",
+    href: "https://github.com/HeartlandTranspersonalAlliance/pskc-site",
     icon: "github",
   },
 ];
