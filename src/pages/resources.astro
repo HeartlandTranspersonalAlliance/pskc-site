@@ -14,11 +14,20 @@ const resources = [
     body: "A confidential community centered around sharing and processing experiences that are outside the ordinary within a supportive and non-judgmental community of peers.",
   },
   {
-    category: "Harm Reduction",
+    category: "Advocacy & Education",
+    icon: "advocacy",
+    title: "Eleos Connect",
+    href: "https://eleosconnect.com",
+    body: "A Lee's Summit nonprofit advocating for accessible, affordable, and safe psychedelic-assisted therapies, including psilocybin, through education and community advocacy.",
+  },
+  {
+    category: "Peer Support",
     icon: "firstAid",
-    title: "RaveSafe Inc.",
-    href: "https://ravesafeinc.com",
-    body: "A harm reduction, volunteer-led nonprofit that strives to provide Narcan, fentanyl test strips, and various other supplies to venues in Kansas City and St. Louis.",
+    title: "Fireside Project",
+    href: "https://firesideproject.org",
+    body: "A nonprofit offering peer support before, during, and after psychedelic experiences through its support line, TripCheck, and Fireside-certified coaching.",
+    relatedTitle: "Safe Journey Sanctum",
+    relatedHref: "https://safejourneysanctum.org",
   },
 ];
 ---
@@ -57,6 +66,11 @@ const resources = [
           <a class="resource-card__link" href={resource.href} target="_blank" rel="noopener noreferrer">
             Learn more
           </a>
+          {resource.relatedHref && resource.relatedTitle && (
+            <a class="resource-card__link resource-card__link--related" href={resource.relatedHref} target="_blank" rel="noopener noreferrer">
+              Visit {resource.relatedTitle}
+            </a>
+          )}
         </article>
       ))}
     </CardGrid>

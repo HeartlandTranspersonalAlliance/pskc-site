@@ -798,6 +798,11 @@ html[data-theme="dark"] .contact-card__link {
   padding-top: 20px;
 }
 
+.resource-card__link--related {
+  margin-top: 10px;
+  padding-top: 0;
+}
+
 .contact-card {
   color: inherit;
   text-decoration: none;
