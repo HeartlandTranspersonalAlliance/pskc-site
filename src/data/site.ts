@@ -32,7 +32,7 @@ export const socialLinks = [
   },
   {
     label: "Facebook",
-    href: "https://facebook.com/psychedelicsocietyofkansascity",
+    href: "https://www.facebook.com/PsychedelicSocietyofKC",
     icon: "facebook",
   },
   {
