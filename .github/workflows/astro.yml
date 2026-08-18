@@ -39,6 +39,10 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Configure production custom domain
+        if: github.repository == 'HeartlandTranspersonalAlliance/pskc-site'
+        run: echo 'psychedelickc.org' > dist/CNAME
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
