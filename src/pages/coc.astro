@@ -116,19 +116,14 @@ const sections = [
   description="The Psychedelic Society of Kansas City code of conduct and ethics for safety, harm reduction, legality, and community accountability."
 >
   <Hero
-    compact
     eyebrow="Code of Conduct"
     titleLines={["Ethics,", "safety,", "accountability."]}
-    intro="Our organization is dedicated to responsible education, harm reduction, and policy reform while adhering to ethical standards, current law, and evidence-based practices."
+    intro="The standards that guide PSKC's educational spaces, gatherings, and community care."
     image="/assets/images/kcpcbanner.jpg"
     imageAlt="Abstract KCPC mandala artwork behind the code of conduct page"
   />
 
-  <Section
-    eyebrow="Community standard"
-    title="A shared commitment to safety, care, and accountability."
-    intro="The full Code of Conduct guides how PSKC creates educational spaces, community gatherings, and peer support."
-  >
+  <Section>
     <article class="prose-site policy-layout">
       <div class="policy-grid">
         <details class="policy-toc" aria-label="Code of conduct contents" open>
@@ -142,12 +137,13 @@ const sections = [
         </details>
 
         <div class="policy-content">
-          <h1>Code of Conduct</h1>
-          <h2>Preamble</h2>
-          <p>
-            Our organization is dedicated to promoting responsible education, harm reduction, and policy reform surrounding psychedelics. Operating within a complex legal and societal landscape, we aim to ensure the safety, empowerment, and well-being of our community while adhering to ethical standards, current state and federal laws, and evidence-based practices.
-          </p>
-          <p>Our Code of Ethics can be summarized with the following overarching goals:</p>
+          <div class="policy-lead">
+            <p class="eyebrow">Preamble</p>
+            <p>
+              PSKC promotes responsible education, harm reduction, and policy reform while prioritizing the safety, empowerment, and well-being of our community. We operate within current law and evidence-based practice.
+            </p>
+          </div>
+          <p class="eyebrow policy-overview-label">Principles at a glance</p>
           <ol>
             {goals.map((goal) => <li>{goal}</li>)}
           </ol>
