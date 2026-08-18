@@ -23,6 +23,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Restore binary assets from Git blobs
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r asset; do
+            mkdir -p "$(dirname "$asset")"
+            git show "HEAD:$asset" > "$asset"
+          done < <(git ls-tree -r --name-only HEAD public/assets/images | grep -E '\.(ico|jpe?g|png|webp)$')
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
