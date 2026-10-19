@@ -1,0 +1,102 @@
+---
+import Button from "./Button.astro";
+import Icon from "./Icon.astro";
+import { withBase } from "../utils/urls";
+
+interface Props {
+  conference?: boolean;
+}
+
+const { conference = false } = Astro.props;
+const raffleUrl = "https://go.rallyup.com/6bb49b";
+---
+
+<section id="chiefs-raffle" class="raffle" aria-labelledby="raffle-title">
+  <div class="site-container">
+    <div class="raffle-main">
+      <div class="raffle-copy">
+        <p class="eyebrow">PSKC fundraiser · Entries close November 19, 2026</p>
+        <h2 id="raffle-title">{conference ? "Make it a Kansas City weekend." : "Your chance at Chiefs club seats."}</h2>
+        <p class="raffle-intro">
+          {conference
+            ? "KCPC on Saturday. A chance to cheer on the Chiefs from club seats on Sunday. Enter the PSKC raffle for the November 22, 2026 game."
+            : "Big game. Great seats. A chance to support PSKC. Enter the raffle to win club seats to the Chiefs game on Sunday, November 22, 2026."}
+        </p>
+        <p>Purchase entries with a donation, or earn entries by sharing your RallyUp link and referring friends. Friends who enter through your referral link get additional free entries, too.</p>
+        <div class="raffle-actions">
+          <Button href={raffleUrl} variant="primary">Enter the raffle on RallyUp <span aria-hidden="true">↗</span></Button>
+          <a class="raffle-referral" href={raffleUrl} target="_blank" rel="noopener noreferrer">Get your referral link <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="raffle-note">Entry options, referral links, and full campaign rules are on RallyUp.</p>
+      </div>
+      <figure class="raffle-art">
+        <img src={withBase("/assets/images/chiefs-raffle-2026.png")} width="959" height="640" loading="lazy" decoding="async" alt="PSKC and Kansas City Chiefs campaign artwork in a colorful football stadium" />
+        <figcaption><Icon name="ticket" /> Chiefs club seats · November 22, 2026</figcaption>
+      </figure>
+    </div>
+
+    <div class="raffle-bonus">
+      <span class="raffle-bonus-icon"><Icon name="users" /></span>
+      <p><strong>Your friends could help you win twice.</strong> The person with the most friend referrals wins a <strong>$100 Target gift card.</strong> Create your personal referral link on RallyUp and start sharing.</p>
+    </div>
+
+    {conference ? (
+      <div class="raffle-weekend">
+        <p><strong>Saturday · November 21</strong><span>Kansas City Psychedelic Conference</span></p>
+        <span class="raffle-plus" aria-hidden="true">+</span>
+        <p><strong>Sunday · November 22</strong><span>Chiefs game · Club seats for the raffle winner</span></p>
+        <p class="raffle-weekend-note">Conference tickets and raffle entries are separate.</p>
+      </div>
+    ) : (
+      <div class="raffle-steps">
+        <div><span class="raffle-step">01</span><h3>Enter with a donation</h3><p>Choose an entry option on RallyUp to support the fundraiser.</p></div>
+        <div><span class="raffle-step">02</span><h3>Share & earn entries</h3><p>Create your RallyUp referral link. Share it and refer friends to earn entries.</p></div>
+        <div><span class="raffle-step">03</span><h3>Give friends a bonus</h3><p>Friends get additional free entries when they use your referral link.</p></div>
+      </div>
+    )}
+    {!conference && <p class="raffle-weekend-link">Visiting for KCPC on November 21? Make a weekend of it. <a href={withBase("/kcpc/#chiefs-raffle")}>Explore the conference weekend <span aria-hidden="true">→</span></a></p>}
+  </div>
+</section>
+
+<style>
+  .raffle {
+    padding-block: clamp(3rem, 6vw, 5.5rem);
+    background: radial-gradient(ellipse at top right, #733027 0, transparent 58%), #281b19;
+    color: #fff5e8;
+    border-block: 1px solid #efc75e66;
+    scroll-margin-top: 6rem;
+  }
+  .raffle-main { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .raffle .eyebrow { color: #efc75e; }
+  .raffle h2 { font-family: var(--font-display); font-size: clamp(2.4rem, 4.6vw, 4rem); line-height: 1.08; margin: 1rem 0 1.5rem; text-wrap: balance; }
+  .raffle-intro { font-size: 1.25rem; line-height: 1.5; }
+  .raffle-copy > p + p { margin-top: 1rem; }
+  .raffle-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin-top: 1.75rem; }
+  .raffle-referral, .raffle-weekend-link a { font-weight: 700; text-underline-offset: 4px; }
+  .raffle-note { font-size: .9rem; color: #e0c8bd; margin-top: 1rem; }
+  .raffle-art { margin: 0; border: 1px solid #efc75e66; border-radius: 16px; overflow: hidden; transform: rotate(2deg); background: #17110f; }
+  .raffle-art img { width: 100%; height: auto; }
+  .raffle-art figcaption { display: flex; align-items: center; justify-content: center; gap: .6rem; padding: 1rem; font-weight: 700; font-size: .95rem; }
+  .raffle-bonus { display: flex; align-items: center; gap: 1.25rem; padding: 1.4rem 1.6rem; margin-top: 2.5rem; border: 1px solid #efc75e66; border-radius: 12px; background: #efc75e12; }
+  .raffle-bonus p { margin: 0; }
+  .raffle-bonus-icon { display: flex; color: #efc75e; font-size: 2rem; }
+  .raffle-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+  .raffle-step { color: #efc75e; font-size: .85rem; font-weight: 800; letter-spacing: .1em; }
+  .raffle-steps h3 { font-family: var(--font-display); font-size: 1.35rem; margin: .5rem 0; }
+  .raffle-steps p { color: #e0c8bd; margin: 0; }
+  .raffle-weekend-link { border-top: 1px solid #efc75e44; padding-top: 1.5rem; margin-top: 2rem; }
+  .raffle-weekend-link a { color: #efc75e; }
+  .raffle-weekend { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: 2rem; }
+  .raffle-weekend p { margin: 0; }
+  .raffle-weekend strong, .raffle-weekend span { display: block; }
+  .raffle-plus { font-size: 2rem; color: #efc75e; }
+  .raffle-weekend-note { flex-basis: 100%; color: #e0c8bd; font-size: .95rem; }
+  @media (max-width: 800px) {
+    .raffle-main { grid-template-columns: 1fr; }
+    .raffle-art { transform: none; max-width: 560px; }
+    .raffle-steps { grid-template-columns: 1fr; gap: 1.5rem; }
+    .raffle-bonus { padding: 1.25rem; align-items: flex-start; }
+    .raffle-weekend { display: grid; gap: 1rem; }
+    .raffle-plus { display: none !important; }
+  }
+</style>
