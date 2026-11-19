@@ -7,13 +7,32 @@ import ImageGallery from "../components/ImageGallery.astro";
 import Icon from "../components/Icon.astro";
 import Section from "../components/Section.astro";
 import Hero from "../components/Hero.astro";
+import { withBase } from "../utils/urls";
 
-const trailblazerSponsors = [
+const afterPartySponsors = [
   {
     href: "https://www.evolution-mag.com/",
     src: "/assets/images/kcpc/evolution.jpg",
     alt: "The Evolution Magazine logo",
     title: "Evolution Magazine",
+  },
+];
+
+const trailblazerSponsors = [
+  {
+    src: "/assets/images/kcpc/midwest-psychedelic.svg",
+    alt: "Midwest Psychedelic logo",
+    title: "Midwest Psychedelic",
+  },
+  {
+    src: "/assets/images/kcpc/psilly-goose.png",
+    alt: "Psilly Goose logo",
+    title: "Psilly Goose",
+  },
+  {
+    src: "/assets/images/kcpc/hummingbird-healthcare.png",
+    alt: "Hummingbird Healthcare logo",
+    title: "Hummingbird Healthcare",
   },
 ];
 
@@ -105,12 +124,12 @@ const kcpc2025Gallery = [
     </CardGrid>
   </Section>
 
-  <Section id="event-details" tone="mist" eyebrow="Event details" title="Saturday, November 21, 2026" intro="Zhou B Art Center · Kansas City, MO · 9:00 AM–5:00 PM">
+  <Section id="event-details" tone="mist" eyebrow="Event details" title="Saturday, November 21, 2026" intro="Zhou B Art Center · Kansas City, MO · Doors 8:00 AM · Program 9:00 AM–6:30 PM Central">
     <CardGrid columns="four">
       <article class="feature-card conference-topic">
         <p class="eyebrow">When</p>
-        <h3>9:00 AM–5:00 PM</h3>
-        <p>Full-day program.</p>
+        <h3>9:00 AM–6:30 PM</h3>
+        <p>Doors and registration open at 8:00 AM.</p>
       </article>
       <article class="feature-card conference-topic">
         <p class="eyebrow">Where</p>
@@ -177,19 +196,13 @@ const kcpc2025Gallery = [
     <ImageGallery images={kcpc2025Gallery} columns="three" />
   </Section>
 
-  <Section eyebrow="Get involved" title="Take part in the conference." intro="Volunteer, propose a session, or support the event as a sponsor or vendor.">
-    <CardGrid columns="three">
+  <Section eyebrow="Get involved" title="Take part in the conference." intro="Volunteer or support the event as a sponsor or vendor.">
+    <CardGrid columns="two">
       <article class="feature-card conference-topic">
         <p class="eyebrow">Volunteer</p>
         <h3>Want to help out?</h3>
         <p>Contribute time, skills, or resources to the KCPC team.</p>
         <Button href="https://forms.gle/uPzrdhrb62ZEaLwD7" variant="secondary">Volunteer form</Button>
-      </article>
-      <article class="feature-card conference-topic">
-        <p class="eyebrow">Speaker and presenter</p>
-        <h3>Propose a session.</h3>
-        <p>Share research, practice, or a perspective with the community.</p>
-        <Button href="https://docs.google.com/forms/d/1arXwo043GzglzVz6K3WAG4Ka8xV9eAXh1uDiL8GkXw4/edit?usp=drivesdk" variant="secondary">Presenter application</Button>
       </article>
       <article class="feature-card conference-topic">
         <p class="eyebrow">Sponsor and vendor</p>
@@ -200,28 +213,126 @@ const kcpc2025Gallery = [
     </CardGrid>
   </Section>
 
-  <Section tone="mist" eyebrow="Program update" title="MIND and BODY tracks return." intro="The 2026 schedule is in development. Session times and presenters will be published when confirmed.">
-    <CardGrid columns="two">
-      <article class="feature-card conference-topic">
-        <p class="eyebrow">MIND</p>
-        <h3>Lectures, panels, and conversation.</h3>
-        <p>Research, clinical practice, policy, and ideas for the future of psychedelic care.</p>
-      </article>
-      <article class="feature-card conference-topic">
-        <p class="eyebrow">BODY</p>
-        <h3>Somatic and embodied practice.</h3>
-        <p>Meditation, movement, ceremony, and other body-based approaches.</p>
-      </article>
-    </CardGrid>
+  <Section id="schedule" tone="mist" eyebrow="KCPC 2026 Schedule" title="Plan your MIND and BODY day." intro="Saturday, November 21 · Doors and registration at 8:00 AM · Program 9:00 AM–6:30 PM">
+    <p class="schedule-hint">Select a track to view the schedule. Switch between MIND and BODY in the gallery.</p>
+    <div class="schedule-collage">
+      {['mind', 'body'].map((track, index) => (
+        <a class="schedule-thumbnail" data-schedule-index={index} href={withBase(`/assets/images/kcpc/schedule-${track}-2026.webp`)} aria-haspopup="dialog" aria-label={`View ${track.toUpperCase()} schedule in gallery`}>
+          <img src={withBase(`/assets/images/kcpc/schedule-${track}-2026-thumb.webp`)} width="400" height="533" loading="lazy" alt={`KCPC 2026 ${track.toUpperCase()} schedule`} />
+          <span>{track.toUpperCase()} <span>View</span></span>
+        </a>
+      ))}
+    </div>
+    <details class="schedule-transcript">
+      <summary>Read the text-only schedule</summary>
+      <h3>MIND track</h3>
+      <ol class="conference-schedule__text">
+            <li><strong>8:00 AM</strong><span>Doors open and registration begins</span></li>
+            <li><strong>9:00–9:10 AM</strong><span>Opening Ceremony &amp; Soundbath — Omno &amp; Mooncat</span></li>
+            <li><strong>9:10–9:40 AM</strong><span>The Sacred Practice of Microdosing: A Foundational Guide — Melissa Saubers</span></li>
+            <li><strong>9:45–10:25 AM</strong><span>Personal Testimony: The Power of Our Stories — Jay Copes &amp; Kim Taylor</span></li>
+            <li><strong>10:25–10:35 AM</strong><span>Break</span></li>
+            <li><strong>10:35–11:05 AM</strong><span>Ayahuasca: Bridging Science, Tradition, &amp; Spirit — Matt Brake</span></li>
+            <li><strong>11:10 AM–12:00 PM</strong><span>Ketamine Assisted Psychotherapy: Hope, Agency, &amp; Motivation for Change — Katja Cahoon, Amanda DiMartini &amp; Liz Wells</span></li>
+            <li><strong>12:00–1:00 PM</strong><span>Lunch break</span></li>
+            <li><strong>1:00–1:05 PM</strong><span>Welcome Back Remarks — Mooncat</span></li>
+            <li><strong>1:05–2:25 PM</strong><span>The Long Strange Trip (keynote) — Dr. Rick Strassman</span></li>
+            <li><strong>2:25–2:35 PM</strong><span>Break</span></li>
+            <li><strong>2:35–3:15 PM</strong><span>Controlled Substances…Sort Of: The Legal Status of Psychedelics — Shawn Lee</span></li>
+            <li><strong>3:20–3:30 PM</strong><span>Update on 2027 Psychedelic Legislature in Missouri — Dena Ladd (MHC)</span></li>
+            <li><strong>3:35–4:15 PM</strong><span>Psychedelics, Art &amp; the Creative Process — Haley Fox, Kyle Yarber, Ian Cook &amp; JAntho CHO</span></li>
+            <li><strong>4:20–4:50 PM</strong><span>Sacred Animal Venoms: Psychedelics &amp; Beyond — Sincere Seven Genesis</span></li>
+            <li><strong>4:50–5:00 PM</strong><span>Break</span></li>
+            <li><strong>5:00–5:40 PM</strong><span>The Role of Community in Psychedelic Integration — Carrie McDaniel, Elizabeth J.O. &amp; Sincere Seven Genesis</span></li>
+            <li><strong>5:45–6:25 PM</strong><span>Psychedelic Education is Harm Reduction — Dale Morgan, Mooncat, Trina DuVall &amp; Harmony MindzEye</span></li>
+            <li><strong>6:25–6:30 PM</strong><span>Closing Remarks &amp; Ceremony — Omno &amp; Mooncat</span></li>
+          </ol>
+      <h3>BODY track</h3>
+      <ol class="conference-schedule__text">
+            <li><strong>9:00–9:10 AM</strong><span>Opening Ceremony &amp; Soundbath — Omno &amp; Mooncat, in the MIND Room</span></li>
+            <li><strong>9:10–9:40 AM</strong><span>Stretch &amp; Sound — Shawn Lillig</span></li>
+            <li><strong>9:45–10:25 AM</strong><span>Breathe Life – 9D Breathwork: A Psychedelic Journey Through Breath &amp; Sound — Harmony MindzEye</span></li>
+            <li><strong>10:25–10:35 AM</strong><span>Break</span></li>
+            <li><strong>10:35–11:05 AM</strong><span>Dreamwork &amp; Psychedelics Toward Soul Encounter — Dreamer Jaime Prieto</span></li>
+            <li><strong>11:10 AM–12:00 PM</strong><span>Qigong: A Moving Meditation for Balance, Energy &amp; Inner Connection — Marisa Frazier</span></li>
+            <li><strong>12:00–1:00 PM</strong><span>Lunch break</span></li>
+            <li><strong>1:00–1:05 PM</strong><span>Welcome Back Remarks — Mooncat, in the MIND Room</span></li>
+            <li><strong>1:05–2:25 PM</strong><span>The Long Strange Trip (keynote) — Dr. Rick Strassman, in the MIND Room</span></li>
+            <li><strong>2:25–2:35 PM</strong><span>Break</span></li>
+            <li><strong>2:35–3:30 PM</strong><span>Accessing Altered States of Consciousness with Breathwork — Stephanie Zamora</span></li>
+            <li><strong>3:35–4:50 PM</strong><span>Authentic Relating — Cameryn Lamare</span></li>
+            <li><strong>4:50–5:00 PM</strong><span>Break</span></li>
+            <li><strong>5:00–6:25 PM</strong><span>Ecstatic Dance — Jenny Severo &amp; DJ Clandestine</span></li>
+            <li><strong>6:25–6:30 PM</strong><span>Closing Remarks &amp; Ceremony — Omno &amp; Mooncat, in the MIND Room</span></li>
+          </ol>
+    </details>
+    <dialog id="schedule-gallery" aria-labelledby="schedule-gallery-title">
+      <div class="schedule-gallery__toolbar">
+        <h2 id="schedule-gallery-title" aria-live="polite">MIND schedule</h2>
+        <button type="button" data-gallery-close autofocus aria-label="Close schedule gallery">Close ×</button>
+      </div>
+      <div class="schedule-gallery__controls" aria-label="Choose schedule">
+        <button type="button" data-gallery-track="0" aria-pressed="true">MIND</button>
+        <button type="button" data-gallery-track="1" aria-pressed="false">BODY</button>
+        <a data-gallery-full href={withBase('/assets/images/kcpc/schedule-mind-2026.webp')} target="_blank" rel="noopener">Open full-size</a>
+      </div>
+      <img data-gallery-image width="1728" height="2304" alt="MIND schedule" />
+    </dialog>
   </Section>
 
   <Section eyebrow="Special Thanks" title="KCPC sponsors make this possible.">
     <div class="space-y-12">
       <div>
+        <h2 class="sponsor-heading">KCPC 2026 Trailblazer Sponsors</h2>
+        <ImageGallery images={trailblazerSponsors} columns="three" variant="logo" />
+      </div>
+      <div>
         <h2 class="sponsor-heading">KCPC 2026 After Party Sponsor</h2>
-        <ImageGallery images={trailblazerSponsors} variant="logo" />
+        <ImageGallery images={afterPartySponsors} variant="logo" />
       </div>
     </div>
   </Section>
 
 </BaseLayout>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#schedule-gallery');
+  const thumbnails = [...document.querySelectorAll<HTMLAnchorElement>('[data-schedule-index]')];
+  if (dialog) {
+    const image = dialog.querySelector<HTMLImageElement>('[data-gallery-image]')!;
+    const full = dialog.querySelector<HTMLAnchorElement>('[data-gallery-full]')!;
+    const title = dialog.querySelector<HTMLElement>('#schedule-gallery-title')!;
+    const buttons = [...dialog.querySelectorAll<HTMLButtonElement>('[data-gallery-track]')];
+    let active = 0;
+    let opener: HTMLAnchorElement | undefined;
+    let previousOverflow = '';
+    const select = (index: number) => {
+      active = (index + thumbnails.length) % thumbnails.length;
+      const track = active === 0 ? 'MIND' : 'BODY';
+      image.src = thumbnails[active].href;
+      image.alt = `KCPC 2026 ${track} schedule`;
+      full.href = image.src;
+      title.textContent = `${track} schedule`;
+      buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === active)));
+    };
+    thumbnails.forEach((link, index) => link.addEventListener('click', (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault(); opener = link; select(index);
+      previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      dialog.showModal();
+    }));
+    buttons.forEach((button, index) => button.addEventListener('click', () => select(index)));
+    dialog.querySelector('[data-gallery-close]')?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault(); select(active + (event.key === 'ArrowRight' ? 1 : -1));
+      }
+    });
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) {
+      const box = dialog.getBoundingClientRect();
+      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
+    }});
+    dialog.addEventListener('close', () => { document.body.style.overflow = previousOverflow; opener?.focus(); });
+  }
+</script>
