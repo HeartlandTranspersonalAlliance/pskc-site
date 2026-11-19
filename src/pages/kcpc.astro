@@ -134,6 +134,16 @@ const kcpc2025Gallery = [
         <p>Included with VIP admission.</p>
       </article>
     </CardGrid>
+    <div class="venue-photos" aria-label="Zhou B Art Center venue photos">
+      <figure class="venue-photos__exterior">
+        <img src={withBase('/assets/images/kcpc/zhou-b-exterior.webp')} width="1200" height="800" loading="lazy" decoding="async" alt="Zhou B Art Center’s glass entrance with its name above the doors, surrounded by red brick walls." />
+        <figcaption>Zhou B Art Center entrance</figcaption>
+      </figure>
+      <figure class="venue-photos__gallery">
+        <img src={withBase('/assets/images/kcpc/zhou-b-gallery.webp')} width="387" height="516" loading="lazy" decoding="async" alt="Inside Zhou B Art Center: paintings on freestanding white panels beside tall windows and a sunlit wooden floor." />
+        <figcaption>Inside the art gallery</figcaption>
+      </figure>
+    </div>
     <div class="kcpc-cta-strip">
       <div>
         <p class="eyebrow">Tickets</p>
@@ -340,3 +350,12 @@ const kcpc2025Gallery = [
     dialog.addEventListener('close', () => { document.body.style.overflow = previousOverflow; opener?.focus(); });
   }
 </script>
+
+<style>
+  .venue-photos { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: center; gap: clamp(16px, 3vw, 32px); margin-top: 28px; }
+  .venue-photos figure { min-width: 0; margin: 0; }
+  .venue-photos img { display: block; width: 100%; height: auto; border-radius: 10px; }
+  .venue-photos__gallery { max-width: 387px; justify-self: center; }
+  .venue-photos figcaption { margin-top: 10px; font-size: .9375rem; line-height: 1.4; }
+  @media (max-width: 640px) { .venue-photos { grid-template-columns: minmax(0, 1fr); } .venue-photos__gallery { width: min(100%, 320px); } }
+</style>
