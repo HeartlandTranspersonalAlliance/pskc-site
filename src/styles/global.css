@@ -1738,3 +1738,137 @@ html[data-theme="dark"] .schedule-time {
 @media (min-width: 640px) { .conference-schedule__text li { grid-template-columns: 11rem minmax(0, 1fr); gap: 16px; } }
 @media (max-width: 760px) { .footer-grid { grid-template-columns: minmax(0, 1fr); } .footer-socials { max-width: 440px; } }
 @media (max-width: 380px) { .footer-actions .button { padding-inline: 10px; font-size: .75rem; } #schedule-gallery { padding: 10px; } }
+
+/* Editorial hierarchy for home, KCPC, resources, about and contact. */
+body[data-editorial] {
+  --type-hero: clamp(2.625rem, 2.1rem + 2.35vw, 4.375rem);
+  --type-compact: clamp(2.125rem, 1.85rem + 1.15vw, 3rem);
+  --type-section: clamp(1.75rem, 1.55rem + .85vw, 2.375rem);
+  --type-statement: clamp(1.375rem, 1.2rem + .65vw, 1.875rem);
+  --type-card: clamp(1.25rem, 1.15rem + .4vw, 1.5rem);
+  --editorial-label: #8c422c;
+  font-size: clamp(1rem, .97rem + .15vw, 1.125rem);
+  line-height: 1.6;
+}
+
+html[data-theme="dark"] body[data-editorial] {
+  --editorial-label: #f3b28d;
+}
+
+[data-editorial] .eyebrow,
+[data-editorial] .section-heading p.eyebrow {
+  margin: 0 0 .5rem;
+  color: var(--editorial-label);
+  font-size: .9375rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: none;
+}
+
+[data-editorial] .hero-eyebrow,
+[data-editorial] .section-tone-ink .eyebrow,
+[data-editorial] .section-tone-ink .section-heading p.eyebrow,
+[data-editorial] .site-footer .eyebrow { color: var(--gold); }
+
+[data-editorial] .hero-shell {
+  min-height: clamp(25rem, 62vh, 39rem);
+}
+
+[data-editorial] .hero-shell--compact {
+  min-height: clamp(17rem, 42vh, 24rem);
+}
+
+[data-editorial] .hero-content {
+  padding-block: clamp(5.8rem, 12vh, 8rem) clamp(2.25rem, 5vh, 3.75rem);
+}
+
+[data-editorial] .hero-shell h1 {
+  width: auto;
+  max-width: min(100%, 22ch);
+  line-height: 1.06;
+}
+
+[data-editorial] .hero-shell--compact h1 {
+  font-size: var(--type-compact);
+}
+
+[data-editorial] .hero-intro,
+[data-editorial] .section-heading p:not(.eyebrow) {
+  width: auto;
+  max-width: 64ch;
+  margin-top: .75rem;
+  font-size: clamp(1rem, .94rem + .3vw, 1.1875rem);
+  line-height: 1.5;
+}
+
+[data-editorial] .hero-actions { margin-top: 1.25rem; }
+[data-editorial] .hero-actions:empty { display: none; }
+[data-editorial] .hero-actions .button { width: auto; }
+
+[data-editorial] main .button,
+[data-editorial] .footer-actions .button {
+  min-height: 44px;
+  font-size: .9375rem;
+  font-weight: 700;
+  text-transform: none;
+}
+
+[data-editorial] .section-band {
+  padding-block: clamp(2.75rem, 5.4vw, 4.75rem);
+  scroll-margin-top: 5rem;
+}
+
+[data-editorial] .section-heading {
+  margin-bottom: clamp(1.25rem, 3vw, 1.875rem);
+}
+
+[data-editorial] .section-heading h2,
+[data-editorial] .prose-site h2,
+[data-editorial] h2.contact-form__title {
+  font-size: var(--type-section);
+  line-height: 1.17;
+}
+
+[data-editorial] .prose-site { max-width: 67ch; font-size: inherit; }
+[data-editorial] .prose-site h2:first-child { margin-top: 0; }
+[data-editorial] .prose-site > * + * { margin-top: .85rem; }
+
+[data-editorial] :is(.feature-card h3, .resource-card h2, .contact-card h2, .timeline-card h3) {
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+[data-editorial] :is(.feature-card, .resource-card, .contact-card) p:not(.eyebrow) {
+  margin-top: .65rem;
+}
+[data-editorial] :is(.resource-card__link, .contact-card__link, .footer-socials a) {
+  font-size: .9375rem;
+}
+[data-editorial] :is(.card-icon, .contact-card__icon) {
+  flex: 0 0 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: .8rem;
+}
+[data-editorial] .resource-card__header > :last-child { min-width: 0; }
+[data-editorial] .resource-card__header .card-icon { margin-bottom: 0; }
+[data-editorial] .sponsor-heading { font-size: var(--type-statement); line-height: 1.24; }
+[data-editorial] .footer-grid h2 { font-size: var(--type-statement); }
+[data-editorial] .editorial-contact {
+  margin: 0 0 1.5rem;
+}
+[data-editorial] .editorial-contact p { margin-top: .65rem; }
+[data-editorial] .editorial-contact .button { margin-top: 1rem; }
+[data-editorial] .editorial-email { color: var(--moss); overflow-wrap: anywhere; text-decoration: underline; }
+html[data-theme="dark"] [data-editorial] .editorial-email { color: var(--gold); }
+
+@media (max-width: 580px) {
+  [data-editorial] .site-container,
+  [data-editorial] .hero-content {
+    width: calc(100% - 2rem);
+    max-width: none;
+  }
+}
+
+[data-editorial] .raffle #raffle-title { font-size: var(--type-section); line-height: 1.17; }
+
+[data-editorial] .raffle .raffle-copy .raffle-intro { font-size: clamp(1rem, .94rem + .3vw, 1.1875rem); }

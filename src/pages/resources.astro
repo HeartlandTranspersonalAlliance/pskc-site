@@ -11,36 +11,41 @@ const resources = [
     icon: "heart",
     title: "Kansas City Psychedelic Integration Circle",
     href: "https://kc-psychedelic.com",
-    body: "A confidential community centered around sharing and processing experiences that are outside the ordinary within a supportive and non-judgmental community of peers.",
+    body: "A confidential Kansas City peer group for talking through psychedelic and other non-ordinary experiences.",
   },
   {
     category: "Advocacy & Education",
     icon: "advocacy",
     title: "Eleos Connect",
     href: "https://eleosconnect.com",
-    body: "A Lee's Summit nonprofit advocating for accessible, affordable, and safe psychedelic-assisted therapies, including psilocybin, through education and community advocacy.",
+    body: "A Lee’s Summit nonprofit that educates the public and advocates for safe, affordable access to psychedelic-assisted therapy, including psilocybin.",
   },
   {
     category: "Peer Support",
     icon: "firstAid",
     title: "Fireside Project",
     href: "https://firesideproject.org",
-    body: "A nonprofit offering peer support before, during, and after psychedelic experiences through its support line, TripCheck, and Fireside-certified coaching.",
-    relatedTitle: "Safe Journey Sanctum",
-    relatedHref: "https://safejourneysanctum.org",
+    body: "A nonprofit with a free, confidential support line for psychedelic experiences. It also offers integration coaching.",
+  },
+  {
+    category: "Harm reduction",
+    icon: "heart",
+    title: "Safe Journey Sanctum",
+    href: "https://safejourneysanctum.org",
+    body: "A Heartland Transpersonal Alliance program that offers peer support and harm reduction education at events.",
   },
 ];
 ---
 
 <BaseLayout
+  editorial
   title="Resources"
-  description="Local harm reduction and psychedelic-focused resources in Kansas City."
+  description="Find a Kansas City integration group, local advocacy, and peer support for psychedelic experiences."
 >
   <Hero
     compact
-    eyebrow="Resources"
-    titleLines={["Local care", "and connection."]}
-    intro="Local harm reduction and psychedelic-focused organizations where you can volunteer, connect with like-minded peers, and support the growing movement in Kansas City."
+    titleLines={["Psychedelic resources"]}
+    intro="Find a local integration group, learn about advocacy in Missouri, or talk to a trained peer."
     image="/assets/images/kcpcbanner.jpg"
     imageAlt="Abstract KCPC mandala artwork used for PSKC resource pages"
   />
@@ -55,22 +60,13 @@ const resources = [
             </div>
             <div>
               <p class="eyebrow">{resource.category}</p>
-              <h2>
-                <a href={resource.href} target="_blank" rel="noopener noreferrer">
-                  {resource.title}
-                </a>
-              </h2>
+              <h2>{resource.title}</h2>
             </div>
           </div>
           <p>{resource.body}</p>
           <a class="resource-card__link" href={resource.href} target="_blank" rel="noopener noreferrer">
-            Learn more
+            Visit {resource.title}
           </a>
-          {resource.relatedHref && resource.relatedTitle && (
-            <a class="resource-card__link resource-card__link--related" href={resource.relatedHref} target="_blank" rel="noopener noreferrer">
-              Visit {resource.relatedTitle}
-            </a>
-          )}
         </article>
       ))}
     </CardGrid>

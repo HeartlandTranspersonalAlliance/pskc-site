@@ -8,31 +8,20 @@ import { site } from "../data/site";
 
 const contactCards = [
   {
-    eyebrow: "Community",
     icon: "discord",
-    title: "Discord community",
-    body: "Join the PSKC online community for direct conversation and local updates.",
+    title: "PSKC on Discord",
+    body: "Talk with other members and get local updates.",
     href: site.discord,
     action: "Join our Discord",
   },
   {
-    eyebrow: "Follow",
     icon: "link",
-    title: "Social links hub",
-    body: "Find PSKC social channels, newsletters, and current public links in one place.",
+    title: "Social links and newsletter",
+    body: "Follow PSKC or find the newsletter.",
     href: site.linksHub,
-    action: "Open links hub",
+    action: "See social links",
   },
   {
-    eyebrow: "Email",
-    icon: "mail",
-    title: "Inquiries",
-    body: "Send questions, press notes, partnership ideas, or accessibility requests by email.",
-    href: `mailto:${site.email}`,
-    action: "Email PSKC",
-  },
-  {
-    eyebrow: "Support",
     icon: "heart",
     title: "Donate",
     body: "Support community education, events, and harm reduction work in Kansas City.",
@@ -43,26 +32,31 @@ const contactCards = [
 ---
 
 <BaseLayout
+  editorial
   title="Contact Us"
-  description="Contact the Psychedelic Society of Kansas City for questions, collaborations, community links, and donation information."
+  description="Email PSKC or use our contact form for questions, accessibility requests, press and partnerships."
 >
   <Hero
     compact
-    eyebrow="Contact"
-    titleLines={["Reach PSKC."]}
-    intro="Have a question, comment, or collaboration opportunity in mind? We would love to hear from you."
+    titleLines={["Contact PSKC"]}
+    intro="Email us or use the contact form for general questions, accessibility requests, press and partnerships."
     image="/assets/images/PSKC%20FB_BANNER-01.jpeg"
     imageAlt="Kansas City skyline illustration with PSKC geometric artwork"
   />
 
   <Section>
-    <CardGrid columns="four">
+    <section class="contact-form editorial-contact" aria-labelledby="contact-options">
+      <h2 id="contact-options" class="contact-form__title">Send us a message</h2>
+      <p>Write to <a class="editorial-email" href={`mailto:${site.email}`}>{site.email}</a> or use the form.</p>
+      <a class="button button--primary" href="https://forms.gle/rrJ3TLN3XgfKAsRQ6" target="_blank" rel="noopener noreferrer">Open contact form</a>
+    </section>
+
+    <CardGrid columns="three">
       {contactCards.map((card) => (
         <a class="contact-card" href={card.href} target={card.href.startsWith("http") ? "_blank" : undefined} rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}>
           <div class="contact-card__icon">
             <Icon name={card.icon} />
           </div>
-          <p class="eyebrow">{card.eyebrow}</p>
           <h2>{card.title}</h2>
           <p>{card.body}</p>
           <span class="contact-card__link">
@@ -72,11 +66,5 @@ const contactCards = [
       ))}
     </CardGrid>
 
-    <div class="contact-form">
-      <p class="eyebrow">Contact form</p>
-      <h2 class="contact-form__title">Send a note to PSKC.</h2>
-      <p>Use the contact form for questions, collaboration ideas, press inquiries, or accessibility requests.</p>
-      <a class="button button--primary mt-6" href="https://forms.gle/rrJ3TLN3XgfKAsRQ6" target="_blank" rel="noopener noreferrer">Open contact form</a>
-    </div>
   </Section>
 </BaseLayout>

@@ -14,26 +14,26 @@ const pillars = [
   {
     label: "Community",
     icon: "users",
-    title: "A welcoming space to connect",
-    body: "Monthly gatherings bring newcomers, advocates, artists, educators, researchers, therapists, and curious explorers into thoughtful conversation.",
+    title: "Meet people locally",
+    body: "Our monthly gatherings welcome newcomers alongside advocates, artists, educators, researchers and therapists.",
   },
   {
     label: "Education",
     icon: "book",
-    title: "Evidence-aware public learning",
-    body: "PSKC shares reliable information about psychedelic science, policy, culture, history, and clinical applications through events, posts, newsletters, and social channels.",
+    title: "Learn about psychedelics",
+    body: "We share information about psychedelic science, policy, culture, history and clinical applications through events, newsletters and social channels.",
   },
   {
     label: "Harm Reduction",
     icon: "firstAid",
-    title: "Safety before spectacle",
-    body: "Our public programming emphasizes informed decision-making, legal boundaries, accurate risk information, and peer support.",
+    title: "Make informed decisions",
+    body: "Our public events discuss risks, legal boundaries and peer support so people can make informed decisions.",
   },
   {
     label: "Advocacy",
     icon: "advocacy",
     title: "Kansas City deserves better policy",
-    body: "We support compassionate, science-driven approaches to drug use, mental health, and community wellbeing.",
+    body: "We support approaches to drug use and mental health informed by research and compassion.",
   },
 ];
 
@@ -41,83 +41,83 @@ const kcpc2025Gallery = [
   {
     src: "/assets/images/kcpc2025/kcpc-2025-03.jpg",
     alt: "Community members gathered in a circle at KCPC 2025",
-    title: "Room for real conversation",
+    title: "Community conversation",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-06.jpg",
     alt: "KCPC 2025 attendees posing together after a session",
-    title: "A community that keeps growing",
+    title: "Attendees after a session",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-08.jpg",
     alt: "Movement workshop with colorful scarves at KCPC 2025",
-    title: "Embodied practice",
+    title: "Movement workshop",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-14.jpg",
     alt: "Audience listening to a KCPC 2025 speaker",
-    title: "Ideas worth gathering for",
+    title: "Speaker session",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-19.jpg",
     alt: "Attendees taking part in a floor-based workshop at KCPC 2025",
-    title: "Learning by doing",
+    title: "Workshop participants",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-21.jpg",
     alt: "Panel conversation on stage at KCPC 2025",
-    title: "Many voices, one room",
+    title: "Panel discussion",
   },
 ];
 ---
 
 <BaseLayout
+  editorial
   title="Home"
-  description="A community-driven organization fostering education, dialogue, and connection around the transformative potential of psychedelics in Kansas City."
+  description="Psychedelic Society of Kansas City hosts community gatherings and education events about psychedelics, harm reduction and public policy."
 >
   <Hero
     eyebrow="KCPC 2026 · Frontiers in Consciousness"
-    titleLines={["KCPC", "2026", "is coming."]}
-    intro="See Dr. Rick Strassman and explore transpersonal modalities, psychedelic science, and community at KCPC 2026."
+    titleLines={["Kansas City", "Psychedelic", "Conference 2026"]}
+    intro="Join us November 21 at Zhou B Art Center for talks and workshops, including a keynote by Dr. Rick Strassman."
     image="/assets/images/kcpc2025/kcpc-2025-20.jpg"
     imageAlt="Panel discussion with speakers on stage at the 2025 Kansas City Psychedelic Conference"
   >
-    <Button slot="actions" href="/kcpc/" variant="primary">Explore KCPC 2026</Button>
+    <Button slot="actions" href="/kcpc/" variant="primary">View conference details</Button>
     <Button slot="actions" href="https://luma.com/rfkhxamw" variant="secondary">Buy tickets</Button>
     <Button slot="actions" href="#chiefs-raffle" variant="secondary">Win Chiefs club seats</Button>
   </Hero>
 
   <ChiefsRaffle />
 
-  <Section tone="mist" eyebrow="Frontiers in Consciousness" title="A new KCPC day is taking shape." intro="Saturday, November 21, 2026 · Doors 8:00 AM · Program 9:00 AM–6:30 PM Central · Zhou B Art Center · Kansas City, MO">
+  <Section tone="mist" eyebrow="Frontiers in Consciousness" title="KCPC 2026 at Zhou B Art Center." intro="Saturday, November 21, 2026 · Doors 8:00 AM · Program 9:00 AM–6:30 PM Central · Zhou B Art Center · Kansas City, MO">
     <div class="kcpc-cta-strip">
       <div>
         <p class="eyebrow">Featured guest</p>
         <h3 class="text-3xl font-bold">Rick Strassman</h3>
-        <p class="mt-2">A pioneering psychedelic researcher and author of <em>DMT: The Spirit Molecule</em>, Dr. Strassman helped reopen the door to human psychedelic research in the United States.</p>
+        <p class="mt-2">Dr. Strassman studied DMT at the University of New Mexico in the early 1990s and wrote <em>DMT: The Spirit Molecule</em>.</p>
       </div>
       <div class="flex flex-wrap gap-3">
-        <Button href="/kcpc/" variant="primary">KCPC 2026 details</Button>
+        <Button href="/kcpc/#schedule" variant="primary">Conference schedule</Button>
         <Button href="https://luma.com/rfkhxamw" variant="secondary">Buy tickets</Button>
       </div>
     </div>
   </Section>
 
   <Section
-    eyebrow="What We Build"
-    title="A public square for psychedelic education in Kansas City."
-    intro="Whether you are a curious newcomer, seasoned advocate, practitioner, artist, or community organizer, PSKC offers a place to connect, learn, and grow."
+    eyebrow="About PSKC"
+    title="Meet Kansas City’s psychedelic community."
+    intro="New to psychedelics or already involved? Join a local gathering to ask questions and meet people interested in the subject."
   >
     <p class="statement">
-      We gather around knowledge, creativity, healing, policy, and the practical work of keeping each other safer.
+      Our gatherings cover psychedelic science and culture, public policy, and ways to keep each other safer.
     </p>
   </Section>
 
   <Section
     tone="mist"
     eyebrow="Pillars"
-    title="Community work with clear values."
-    intro="The society is rooted in education, peer connection, harm reduction, and responsible public dialogue."
+    title="What we do."
   >
     <CardGrid columns="four">
       {
@@ -135,15 +135,15 @@ const kcpc2025Gallery = [
     </CardGrid>
   </Section>
 
-  <Section tone="ink" eyebrow="Monthly Meetups" title="Gatherings with substance.">
+  <Section tone="ink" eyebrow="Monthly meetups" title="Meet us at an upcoming event.">
     <div class="split-band">
       <div>
         <p class="text-xl leading-relaxed text-[var(--paper)]/85">
           Join us for monthly meetups where speakers and community members explore clinical research, drug policy, visionary art, integration, health, and culture.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <Button href="/events/" variant="primary">Upcoming Events</Button>
-          <Button href={site.luma} variant="outline">Lu.ma Calendar</Button>
+          <Button href="/events/" variant="primary">Upcoming events</Button>
+          <Button href={site.luma} variant="outline">Luma calendar</Button>
         </div>
       </div>
       <div class="split-media">
@@ -152,16 +152,16 @@ const kcpc2025Gallery = [
     </div>
   </Section>
 
-  <Section eyebrow="KCPC 2025 · In pictures" title="See what the gathering feels like." intro="The 2025 conference brought together curious people, experienced practitioners, artists, speakers, and new friends. Take a look at the rooms, workshops, and conversations that set the tone for KCPC 2026.">
+  <Section eyebrow="KCPC 2025 · In pictures" title="Photos from KCPC 2025." intro="Talks, workshops and community gatherings from last year’s conference.">
     <ImageGallery images={kcpc2025Gallery} columns="three" />
     <div class="split-band">
       <div class="split-media">
         <img src={withBase("/assets/images/kcpc2025/kcpc-2025-15.jpg")} alt="Panel discussion at the 2025 Kansas City Psychedelic Conference" loading="lazy" />
       </div>
       <div>
-        <p>KCPC 2026 continues that spirit with a full day at the Zhou B Art Center, featuring Dr. Rick Strassman and a community-centered program that makes room for both big questions and practical tools.</p>
+        <p>KCPC returns November 21 at Zhou B Art Center. See this year’s speakers and plan your day with the Mind and Body schedules.</p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <Button href="/kcpc/" variant="primary">Conference Details</Button>
+          <Button href="/kcpc/" variant="primary">Conference details</Button>
           <Button href="https://luma.com/rfkhxamw" variant="secondary">Buy tickets</Button>
         </div>
       </div>

@@ -39,23 +39,23 @@ const trailblazerSponsors = [
 const programFocusItems = [
   {
     icon: "book",
-    title: "Advancements in psychedelic science",
-    body: "Research, clinical practice, and the questions shaping the field.",
+    title: "Psychedelic research",
+    body: "Sessions on DMT, ayahuasca, microdosing and ketamine-assisted psychotherapy.",
   },
   {
     icon: "heart",
     title: "Integration and harm reduction",
-    body: "Practical approaches to preparation, support, and aftercare.",
+    body: "Panels on community integration and psychedelic education as harm reduction.",
   },
   {
     icon: "policy",
-    title: "Missouri policy efforts",
-    body: "State and local conversations about access, care, and public policy.",
+    title: "Missouri policy and access",
+    body: "Talks on the legal status of psychedelics and Missouri’s 2027 legislative efforts.",
   },
   {
     icon: "spark",
-    title: "Embodied practice",
-    body: "Somatic work, meditation, movement, and body-based sessions.",
+    title: "Breathwork and movement",
+    body: "Breathwork, qigong, authentic relating and ecstatic dance in the Body Room.",
   },
 ];
 
@@ -63,45 +63,46 @@ const kcpc2025Gallery = [
   {
     src: "/assets/images/kcpc2025/kcpc-2025-16.jpg",
     alt: "KCPC 2025 exhibitor table with handmade jewelry and community materials",
-    title: "Lectures & Q&A",
+    title: "Community exhibits",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-07.jpg",
     alt: "Attendees moving together during a KCPC 2025 workshop",
-    title: "Movement and play",
-    description: "Somatic workshops, ecstatic dance, and ceremony.",
+    title: "Movement workshop",
+    description: "Participants in a group movement session.",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-09.jpg",
     alt: "KCPC 2025 attendees connecting near community tables",
-    title: "Aligned organizations and causes",
+    title: "Community tables",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-12.jpg",
     alt: "KCPC 2025 vendor displaying handmade jewelry and goods",
-    title: "Vendor & Sponsor Exhibits",
+    title: "Vendor exhibits",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-18.jpg",
     alt: "Audience seated for a presentation at KCPC 2025",
-    title: "A space to slow down and go inward",
+    title: "Audience at a presentation",
   },
   {
     src: "/assets/images/kcpc2025/kcpc-2025-19.jpg",
     alt: "KCPC 2025 attendees resting on cushions during a guided session",
-    title: "Unique community discussion panels",
+    title: "Guided workshop",
   },
 ];
 ---
 
 <BaseLayout
-  title="Kansas City Psychedelic Conference"
+  editorial
+  title="Kansas City Psychedelic Conference 2026"
   description="Kansas City Psychedelic Conference 2026: Frontiers in Consciousness, November 21 at the Zhou B Art Center in Kansas City, featuring Dr. Rick Strassman, author of DMT: The Spirit Molecule."
 >
   <Hero
     eyebrow="KCPC 2026 · Frontiers in Consciousness"
     titleLines={["Kansas City", "Psychedelic", "Conference"]}
-    intro="A full day of research, conversation, and embodied practice with keynote speaker Dr. Rick Strassman."
+    intro="Talks and workshops on psychedelic research, policy and integration, with keynote speaker Dr. Rick Strassman."
     image="/assets/images/kcpc2025/kcpc-2025-14.jpg"
     imageAlt="Audience listening to a speaker at the 2025 Kansas City Psychedelic Conference"
   >
@@ -109,20 +110,6 @@ const kcpc2025Gallery = [
     <Button slot="actions" href="#event-details" variant="secondary">Event details</Button>
     <Button slot="actions" href="https://forms.gle/uPzrdhrb62ZEaLwD7" variant="secondary">Volunteer</Button>
   </Hero>
-
-  <Section tone="paper" eyebrow="Program focus" title="Four areas shape the day." intro="A balanced program across research, public policy, integration, and embodied practice.">
-    <CardGrid columns="four">
-      {programFocusItems.map((item) => (
-        <article class="feature-card conference-topic">
-          <div class="card-icon">
-            <Icon name={item.icon} />
-          </div>
-          <h3>{item.title}</h3>
-          <p>{item.body}</p>
-        </article>
-      ))}
-    </CardGrid>
-  </Section>
 
   <Section id="event-details" tone="mist" eyebrow="Event details" title="Saturday, November 21, 2026" intro="Zhou B Art Center · Kansas City, MO · Doors 8:00 AM · Program 9:00 AM–6:30 PM Central">
     <CardGrid columns="four">
@@ -150,71 +137,13 @@ const kcpc2025Gallery = [
     <div class="kcpc-cta-strip">
       <div>
         <p class="eyebrow">Tickets</p>
-        <p>Tickets are available now.</p>
       </div>
       <Button href="https://luma.com/rfkhxamw" variant="primary">Buy tickets</Button>
     </div>
   </Section>
 
-  <ChiefsRaffle conference />
-
-  <Section tone="ink" eyebrow="2026 theme" title="Frontiers in Consciousness">
-    <CardGrid columns="three">
-      <article class="feature-card conference-topic">
-        <p class="eyebrow">The premise</p>
-        <h3>Beyond the known</h3>
-        <p>Learn about cutting-edge psychedelic science developments and discoveries.</p>
-      </article>
-      <article class="feature-card conference-topic">
-        <p class="eyebrow">The conversation</p>
-        <h3>Science, healing, and spirituality</h3>
-        <p>Research and lived experience in the same room.</p>
-      </article>
-      <article class="feature-card conference-topic">
-        <p class="eyebrow">The format</p>
-        <h3>Mind and Body stages</h3>
-        <p>Mind brings lectures, panels, and Q&A. Body brings somatic workshops, ecstatic dance, meditation, and ceremony.</p>
-      </article>
-    </CardGrid>
-  </Section>
-
-  <Section eyebrow="Keynote speaker" title="Dr. Rick Strassman" intro="Author of DMT: The Spirit Molecule and a pioneering researcher in human psychedelic studies.">
-    <div class="split-band">
-      <div>
-        <p class="eyebrow">A long view</p>
-        <p class="text-xl leading-relaxed">Dr. Strassman’s DMT studies at the University of New Mexico in the early 1990s helped reopen the door to human psychedelic research in the United States. He later wrote <em>DMT: The Spirit Molecule</em>, the landmark book that brought this work to a wider audience.</p>
-      </div>
-      <div>
-        <p class="eyebrow">On the program</p>
-        <p class="text-xl leading-relaxed">His keynote will set the tone for the day’s Mind and Body conversations, alongside psychedelic art, interactive activations, a gallery, and a raffle supporting Safe Journey Sanctum.</p>
-      </div>
-    </div>
-  </Section>
-
-  <Section eyebrow="KCPC 2025" title="A look back at last year." intro="Scenes from the rooms, workshops, and conversations that shaped KCPC 2025."
-  >
-    <ImageGallery images={kcpc2025Gallery} columns="three" />
-  </Section>
-
-  <Section eyebrow="Get involved" title="Take part in the conference." intro="Volunteer or support the event as a sponsor or vendor.">
-    <CardGrid columns="two">
-      <article class="feature-card conference-topic">
-        <p class="eyebrow">Volunteer</p>
-        <h3>Want to help out?</h3>
-        <p>Contribute time, skills, or resources to the KCPC team.</p>
-        <Button href="https://forms.gle/uPzrdhrb62ZEaLwD7" variant="secondary">Volunteer form</Button>
-      </article>
-      <article class="feature-card conference-topic">
-        <p class="eyebrow">Sponsor and vendor</p>
-        <h3>Support the program.</h3>
-        <p>Bring your organization, service, or offering to KCPC.</p>
-        <Button href="https://docs.google.com/forms/d/1PZUCp2RBuPI0S_-Z9KzcsKH_P2sIAXYKfXRJ2BZFaok/edit?usp=drivesdk" variant="secondary">Sponsor and vendor</Button>
-      </article>
-    </CardGrid>
-  </Section>
-
-  <Section id="schedule" tone="mist" eyebrow="KCPC 2026 Schedule" title="Plan your MIND and BODY day." intro="Saturday, November 21 · Doors and registration at 8:00 AM · Program 9:00 AM–6:30 PM">
-    <p class="schedule-hint">Select a track to view the schedule. Switch between MIND and BODY in the gallery.</p>
+  <Section id="schedule" tone="mist" eyebrow="KCPC 2026 Schedule" title="Conference schedule." intro="Saturday, November 21 · Doors and registration at 8:00 AM · Program 9:00 AM–6:30 PM">
+    <p class="schedule-hint">Choose Mind or Body to open the full schedule.</p>
     <div class="schedule-collage">
       {['mind', 'body'].map((track, index) => (
         <a class="schedule-thumbnail" data-schedule-index={index} href={withBase(`/assets/images/kcpc/schedule-${track}-2026.webp`)} aria-haspopup="dialog" aria-label={`View ${track.toUpperCase()} schedule in gallery`}>
@@ -280,7 +209,82 @@ const kcpc2025Gallery = [
     </dialog>
   </Section>
 
-  <Section eyebrow="Special Thanks" title="KCPC sponsors make this possible.">
+  <Section tone="paper" eyebrow="Program focus" title="What’s on the program.">
+    <CardGrid columns="four">
+      {programFocusItems.map((item) => (
+        <article class="feature-card conference-topic">
+          <div class="card-icon">
+            <Icon name={item.icon} />
+          </div>
+          <h3>{item.title}</h3>
+          <p>{item.body}</p>
+        </article>
+      ))}
+    </CardGrid>
+  </Section>
+
+
+
+  <ChiefsRaffle conference />
+
+  <Section tone="ink" eyebrow="2026 theme" title="Frontiers in Consciousness">
+    <CardGrid columns="three">
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">Research</p>
+        <h3>Psychedelic science</h3>
+        <p>Hear about psychedelic research and its applications in clinical practice.</p>
+      </article>
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">The conversation</p>
+        <h3>Science, healing, and spirituality</h3>
+        <p>Speakers discuss research alongside personal experience and spiritual practice.</p>
+      </article>
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">The format</p>
+        <h3>Mind and Body tracks</h3>
+        <p>The Mind Room hosts talks and panels. The Body Room hosts movement and experiential sessions. Both tracks join in the Mind Room for the keynote and opening and closing ceremonies.</p>
+      </article>
+    </CardGrid>
+  </Section>
+
+  <Section eyebrow="Keynote speaker" title="Dr. Rick Strassman" intro="DMT researcher and author of DMT: The Spirit Molecule.">
+    <div class="split-band">
+      <div>
+        <p class="eyebrow">Research and writing</p>
+        <p class="text-xl leading-relaxed">Dr. Strassman studied DMT at the University of New Mexico in the early 1990s. He later wrote <em>DMT: The Spirit Molecule</em> about that research.</p>
+      </div>
+      <div>
+        <p class="eyebrow">On the program</p>
+        <p class="text-xl leading-relaxed">His keynote, “The Long Strange Trip,” runs from 1:05 to 2:25 PM in the Mind Room. The conference also includes psychedelic art, a gallery and a raffle.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section eyebrow="KCPC 2025" title="Photos from KCPC 2025." intro="A look at last year’s workshops, speakers and community tables."
+  >
+    <ImageGallery images={kcpc2025Gallery} columns="three" />
+  </Section>
+
+  <Section eyebrow="Get involved" title="Get involved with KCPC." intro="Volunteer or support the event as a sponsor or vendor.">
+    <CardGrid columns="two">
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">Volunteer</p>
+        <h3>Volunteer with us</h3>
+        <p>Help the KCPC team run the conference. Tell us about your interests and availability.</p>
+        <Button href="https://forms.gle/uPzrdhrb62ZEaLwD7" variant="secondary">Volunteer form</Button>
+      </article>
+      <article class="feature-card conference-topic">
+        <p class="eyebrow">Sponsor and vendor</p>
+        <h3>Sponsor or exhibit at KCPC</h3>
+        <p>Apply to support the conference as a sponsor or take part as a vendor.</p>
+        <Button href="https://docs.google.com/forms/d/1PZUCp2RBuPI0S_-Z9KzcsKH_P2sIAXYKfXRJ2BZFaok/edit?usp=drivesdk" variant="secondary">Sponsor/vendor application</Button>
+      </article>
+    </CardGrid>
+  </Section>
+
+
+
+  <Section eyebrow="Our sponsors" title="Thank you to our sponsors.">
     <div class="space-y-12">
       <div>
         <h2 class="sponsor-heading">KCPC 2026 Trailblazer Sponsors</h2>
