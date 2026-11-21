@@ -220,16 +220,16 @@ const kcpc2025Gallery = [
   </Section>
 
   <Section id="event-map" title="Conference map" intro="Check in by the entrance, then use the map’s yellow arrows to find the Mind and Body rooms. Vendor booths and Safe Journey Sanctum are in the Community Space.">
-    <a class="schedule-thumbnail kcpc-image-card" data-gallery-title="Conference map" href={withBase('/assets/images/kcpc/event-map-2026.webp')} aria-haspopup="dialog" aria-label="Enlarge the KCPC 2026 conference map">
-      <img src={withBase('/assets/images/kcpc/event-map-2026-thumb.webp')} width="420" height="324" loading="lazy" alt="KCPC 2026 conference map showing registration, the Mind and Body rooms, and vendor booths" />
+    <a class="schedule-thumbnail kcpc-image-card" data-gallery-title="Conference map" data-gallery-wide href={withBase('/assets/images/kcpc/event-map-2026-hd.webp')} aria-haspopup="dialog" aria-label="Enlarge the KCPC 2026 conference map">
+      <img src={withBase('/assets/images/kcpc/event-map-2026-hd-thumb.webp')} width="420" height="325" loading="lazy" alt="KCPC 2026 conference map showing registration, the Mind and Body rooms, and vendor booths" />
       <span>Conference map <span>View map</span></span>
     </a>
   </Section>
 
   <Section id="after-party" title="KCPC 2026 after-party" intro="Saturday, November 21 at 8:00 PM · In The Lowest Ferns, 1105 Hickory St., Kansas City, MO · 21+">
     <p class="kcpc-afterparty-details">Free with a conference badge. VIP ticket holders also get a complimentary noodle bowl from Food by KayFan.</p>
-    <a class="schedule-thumbnail kcpc-image-card kcpc-image-card--flyer" data-gallery-title="KCPC 2026 after-party flyer" href={withBase('/assets/images/kcpc/after-party-2026.webp')} aria-haspopup="dialog" aria-label="Enlarge the KCPC 2026 after-party flyer">
-      <img src={withBase('/assets/images/kcpc/after-party-2026-thumb.webp')} width="340" height="440" loading="lazy" alt="KCPC 2026 after-party flyer for In The Lowest Ferns" />
+    <a class="schedule-thumbnail kcpc-image-card kcpc-image-card--flyer" data-gallery-title="KCPC 2026 after-party flyer" href={withBase('/assets/images/kcpc/after-party-2026-hd.webp')} aria-haspopup="dialog" aria-label="Enlarge the KCPC 2026 after-party flyer">
+      <img src={withBase('/assets/images/kcpc/after-party-2026-hd-thumb.webp')} width="340" height="440" loading="lazy" alt="KCPC 2026 after-party flyer for In The Lowest Ferns" />
       <span>After-party flyer <span>View flyer</span></span>
     </a>
   </Section>
@@ -353,6 +353,7 @@ const kcpc2025Gallery = [
       opener = link;
       const index = thumbnails.indexOf(link);
       dialog.classList.toggle('kcpc-single-image', index === -1);
+      dialog.classList.toggle('kcpc-wide-image', link.hasAttribute('data-gallery-wide'));
       buttons.forEach((button) => { button.hidden = index === -1; });
       if (index === -1) showImage(link);
       else select(index);
@@ -380,6 +381,7 @@ const kcpc2025Gallery = [
   .kcpc-image-card--flyer { width: min(100%, 340px); margin-top: 12px; }
   .kcpc-afterparty-details { margin: 24px auto 0; text-align: center; }
   #schedule-gallery.kcpc-single-image { width: min(560px, 96vw); }
+  #schedule-gallery.kcpc-wide-image { width: min(1040px, 96vw); }
   #schedule-gallery.kcpc-single-image img { width: auto; max-width: 100%; margin-inline: auto; }
   #schedule-gallery button[hidden] { display: none; }
 
