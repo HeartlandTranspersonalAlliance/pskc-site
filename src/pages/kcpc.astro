@@ -129,9 +129,9 @@ const kcpc2025Gallery = [
         <p>Author of <em>DMT: The Spirit Molecule</em>.</p>
       </article>
       <article class="feature-card conference-topic">
-        <p class="eyebrow">VIP ticket</p>
-        <h3>After-party access</h3>
-        <p>Included with VIP admission.</p>
+        <p class="eyebrow">After-party · 21+</p>
+        <h3>Free with a conference badge</h3>
+        <p>VIP ticket holders also get a complimentary noodle bowl from Food by KayFan.</p>
       </article>
     </CardGrid>
     <div class="venue-photos" aria-label="Zhou B Art Center venue photos">
@@ -156,7 +156,7 @@ const kcpc2025Gallery = [
     <p class="schedule-hint">Choose Mind or Body to open the full schedule.</p>
     <div class="schedule-collage">
       {['mind', 'body'].map((track, index) => (
-        <a class="schedule-thumbnail" data-schedule-index={index} href={withBase(`/assets/images/kcpc/schedule-${track}-2026.webp`)} aria-haspopup="dialog" aria-label={`View ${track.toUpperCase()} schedule in gallery`}>
+        <a class="schedule-thumbnail" data-schedule-index={index} data-gallery-title={`${track.toUpperCase()} schedule`} href={withBase(`/assets/images/kcpc/schedule-${track}-2026.webp`)} aria-haspopup="dialog" aria-label={`View ${track.toUpperCase()} schedule in gallery`}>
           <img src={withBase(`/assets/images/kcpc/schedule-${track}-2026-thumb.webp`)} width="400" height="533" loading="lazy" alt={`KCPC 2026 ${track.toUpperCase()} schedule`} />
           <span>{track.toUpperCase()} <span>View</span></span>
         </a>
@@ -208,15 +208,22 @@ const kcpc2025Gallery = [
     <dialog id="schedule-gallery" aria-labelledby="schedule-gallery-title">
       <div class="schedule-gallery__toolbar">
         <h2 id="schedule-gallery-title" aria-live="polite">MIND schedule</h2>
-        <button type="button" data-gallery-close autofocus aria-label="Close schedule gallery">Close ×</button>
+        <button type="button" data-gallery-close autofocus aria-label="Close image preview">Close ×</button>
       </div>
       <div class="schedule-gallery__controls" aria-label="Choose schedule">
         <button type="button" data-gallery-track="0" aria-pressed="true">MIND</button>
         <button type="button" data-gallery-track="1" aria-pressed="false">BODY</button>
         <a data-gallery-full href={withBase('/assets/images/kcpc/schedule-mind-2026.webp')} target="_blank" rel="noopener">Open full-size</a>
       </div>
-      <img data-gallery-image width="1728" height="2304" alt="MIND schedule" />
+      <img data-gallery-image alt="" />
     </dialog>
+  </Section>
+
+  <Section id="event-map" title="Conference map" intro="Check in by the entrance, then use the map’s yellow arrows to find the Mind and Body rooms. Vendor booths and Safe Journey Sanctum are in the Community Space.">
+    <a class="schedule-thumbnail kcpc-image-card" data-gallery-title="Conference map" href={withBase('/assets/images/kcpc/event-map-2026.webp')} aria-haspopup="dialog" aria-label="Enlarge the KCPC 2026 conference map">
+      <img src={withBase('/assets/images/kcpc/event-map-2026-thumb.webp')} width="420" height="324" loading="lazy" alt="KCPC 2026 conference map showing registration, the Mind and Body rooms, and vendor booths" />
+      <span>Conference map <span>View map</span></span>
+    </a>
   </Section>
 
   <Section tone="paper" eyebrow="Program focus" title="What’s on the program.">
@@ -303,6 +310,11 @@ const kcpc2025Gallery = [
       <div>
         <h2 class="sponsor-heading">KCPC 2026 After Party Sponsor</h2>
         <ImageGallery images={afterPartySponsors} variant="logo" />
+        <p class="kcpc-afterparty-details"><strong>After-party:</strong> November 21 at 8:00 PM · In The Lowest Ferns, 1105 Hickory St., Kansas City, MO · 21+<br />Free with a conference badge. VIP ticket holders also get a complimentary noodle bowl from Food by KayFan.</p>
+        <a class="schedule-thumbnail kcpc-image-card kcpc-image-card--flyer" data-gallery-title="KCPC 2026 after-party flyer" href={withBase('/assets/images/kcpc/after-party-2026.webp')} aria-haspopup="dialog" aria-label="Enlarge the KCPC 2026 after-party flyer">
+          <img src={withBase('/assets/images/kcpc/after-party-2026-thumb.webp')} width="340" height="440" loading="lazy" alt="KCPC 2026 after-party flyer for In The Lowest Ferns" />
+          <span>After-party flyer <span>View flyer</span></span>
+        </a>
       </div>
     </div>
   </Section>
@@ -311,8 +323,9 @@ const kcpc2025Gallery = [
 
 <script>
   const dialog = document.querySelector<HTMLDialogElement>('#schedule-gallery');
-  const thumbnails = [...document.querySelectorAll<HTMLAnchorElement>('[data-schedule-index]')];
-  if (dialog) {
+  const triggers = [...document.querySelectorAll<HTMLAnchorElement>('[data-gallery-title]')];
+  const thumbnails = triggers.filter((link) => link.hasAttribute('data-schedule-index'));
+  if (dialog && typeof dialog.showModal === 'function') {
     const image = dialog.querySelector<HTMLImageElement>('[data-gallery-image]')!;
     const full = dialog.querySelector<HTMLAnchorElement>('[data-gallery-full]')!;
     const title = dialog.querySelector<HTMLElement>('#schedule-gallery-title')!;
@@ -320,26 +333,35 @@ const kcpc2025Gallery = [
     let active = 0;
     let opener: HTMLAnchorElement | undefined;
     let previousOverflow = '';
+    const showImage = (link: HTMLAnchorElement) => {
+      image.alt = link.querySelector('img')?.alt ?? '';
+      image.src = link.href;
+      full.href = link.href;
+      title.textContent = link.dataset.galleryTitle ?? '';
+      dialog.scrollTop = 0;
+    };
     const select = (index: number) => {
       active = (index + thumbnails.length) % thumbnails.length;
-      const track = active === 0 ? 'MIND' : 'BODY';
-      image.src = thumbnails[active].href;
-      image.alt = `KCPC 2026 ${track} schedule`;
-      full.href = image.src;
-      title.textContent = `${track} schedule`;
+      showImage(thumbnails[active]);
       buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === active)));
     };
-    thumbnails.forEach((link, index) => link.addEventListener('click', (event) => {
+    triggers.forEach((link) => link.addEventListener('click', (event) => {
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      event.preventDefault(); opener = link; select(index);
+      event.preventDefault();
+      opener = link;
+      const index = thumbnails.indexOf(link);
+      dialog.classList.toggle('kcpc-single-image', index === -1);
+      buttons.forEach((button) => { button.hidden = index === -1; });
+      if (index === -1) showImage(link);
+      else select(index);
       previousOverflow = document.body.style.overflow;
-      document.body.style.overflow = 'hidden';
       dialog.showModal();
+      document.body.style.overflow = 'hidden';
     }));
     buttons.forEach((button, index) => button.addEventListener('click', () => select(index)));
     dialog.querySelector('[data-gallery-close]')?.addEventListener('click', () => dialog.close());
     dialog.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      if (opener?.hasAttribute('data-schedule-index') && (event.key === 'ArrowRight' || event.key === 'ArrowLeft')) {
         event.preventDefault(); select(active + (event.key === 'ArrowRight' ? 1 : -1));
       }
     });
@@ -352,6 +374,13 @@ const kcpc2025Gallery = [
 </script>
 
 <style>
+  .kcpc-image-card { width: min(100%, 420px); margin-inline: auto; }
+  .kcpc-image-card--flyer { width: min(100%, 340px); margin-top: 12px; }
+  .kcpc-afterparty-details { margin: 24px auto 0; text-align: center; }
+  #schedule-gallery.kcpc-single-image { width: min(560px, 96vw); }
+  #schedule-gallery.kcpc-single-image img { width: auto; max-width: 100%; margin-inline: auto; }
+  #schedule-gallery button[hidden] { display: none; }
+
   .venue-photos { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: center; gap: clamp(16px, 3vw, 32px); margin-top: 28px; }
   .venue-photos figure { min-width: 0; margin: 0; }
   .venue-photos img { display: block; width: 100%; height: auto; border-radius: 10px; }
