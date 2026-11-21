@@ -226,6 +226,14 @@ const kcpc2025Gallery = [
     </a>
   </Section>
 
+  <Section id="after-party" title="KCPC 2026 after-party" intro="Saturday, November 21 at 8:00 PM · In The Lowest Ferns, 1105 Hickory St., Kansas City, MO · 21+">
+    <p class="kcpc-afterparty-details">Free with a conference badge. VIP ticket holders also get a complimentary noodle bowl from Food by KayFan.</p>
+    <a class="schedule-thumbnail kcpc-image-card kcpc-image-card--flyer" data-gallery-title="KCPC 2026 after-party flyer" href={withBase('/assets/images/kcpc/after-party-2026.webp')} aria-haspopup="dialog" aria-label="Enlarge the KCPC 2026 after-party flyer">
+      <img src={withBase('/assets/images/kcpc/after-party-2026-thumb.webp')} width="340" height="440" loading="lazy" alt="KCPC 2026 after-party flyer for In The Lowest Ferns" />
+      <span>After-party flyer <span>View flyer</span></span>
+    </a>
+  </Section>
+
   <Section tone="paper" eyebrow="Program focus" title="What’s on the program.">
     <CardGrid columns="four">
       {programFocusItems.map((item) => (
@@ -241,8 +249,6 @@ const kcpc2025Gallery = [
   </Section>
 
 
-
-  <ChiefsRaffle conference />
 
   <Section tone="ink" eyebrow="2026 theme" title="Frontiers in Consciousness">
     <CardGrid columns="three">
@@ -310,15 +316,11 @@ const kcpc2025Gallery = [
       <div>
         <h2 class="sponsor-heading">KCPC 2026 After Party Sponsor</h2>
         <ImageGallery images={afterPartySponsors} variant="logo" />
-        <p class="kcpc-afterparty-details"><strong>After-party:</strong> November 21 at 8:00 PM · In The Lowest Ferns, 1105 Hickory St., Kansas City, MO · 21+<br />Free with a conference badge. VIP ticket holders also get a complimentary noodle bowl from Food by KayFan.</p>
-        <a class="schedule-thumbnail kcpc-image-card kcpc-image-card--flyer" data-gallery-title="KCPC 2026 after-party flyer" href={withBase('/assets/images/kcpc/after-party-2026.webp')} aria-haspopup="dialog" aria-label="Enlarge the KCPC 2026 after-party flyer">
-          <img src={withBase('/assets/images/kcpc/after-party-2026-thumb.webp')} width="340" height="440" loading="lazy" alt="KCPC 2026 after-party flyer for In The Lowest Ferns" />
-          <span>After-party flyer <span>View flyer</span></span>
-        </a>
       </div>
     </div>
   </Section>
 
+  <ChiefsRaffle />
 </BaseLayout>
 
 <script>
