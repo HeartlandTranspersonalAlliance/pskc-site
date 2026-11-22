@@ -4,20 +4,70 @@ import Button from "../components/Button.astro";
 import Icon from "../components/Icon.astro";
 import Section from "../components/Section.astro";
 import Hero from "../components/Hero.astro";
-import { exampleEvents } from "../data/exampleEvents";
 import { site } from "../data/site";
 import { withBase } from "../utils/urls";
+
+const announcedEvents = [
+  {
+    id: "anniversary",
+    month: "JAN",
+    day: "24",
+    dateISO: "2027-01-24",
+    dateLabel: "Sunday, January 24",
+    time: "5:00–8:00 PM",
+    category: "Community celebration",
+    title: "2-Year Anniversary Pot Luck",
+    description: "PSKC turns two! Celebrate two full years of psychedelic community, conversation, and connection in Kansas City.",
+    icon: "heart",
+  },
+  {
+    id: "book-club",
+    month: "FEB",
+    day: "21",
+    dateISO: "2027-02-21",
+    dateLabel: "Sunday, February 21",
+    time: "5:00–7:00 PM",
+    category: "Book club · Author conversation",
+    title: "Book Club: “My Altered States”",
+    description: "Read Rick Strassman’s latest book and join us at Deviant Kava for a video chat with the author.",
+    icon: "book",
+  },
+  {
+    id: "film-screening",
+    month: "MAR",
+    day: "TBA",
+    dateISO: null,
+    dateLabel: "March 2027 · Date TBA",
+    time: "Time TBA",
+    category: "Film screening · Q&A",
+    title: "Psychedelic Film Screening",
+    description: "Filmmaker Sheldon Norris screens his new film, “Confessions of a Dope Dealer,” followed by a Q&A.",
+    icon: "spark",
+  },
+  {
+    id: "bicycle-day",
+    month: "APR",
+    day: "TBA",
+    dateISO: null,
+    dateLabel: "April 2027 · Date TBA",
+    time: "Time TBA",
+    category: "Annual celebration",
+    title: "3rd Annual PSKC Bicycle Day Party",
+    description: "The party keeps growing! Our third annual Bicycle Day celebration has plenty of surprises in store.",
+    icon: "sun",
+  },
+];
 ---
 
 <BaseLayout
   title="Upcoming Events"
-  description="Upcoming Psychedelic Society of Kansas City events and monthly meetups."
+  description="Explore the Psychedelic Society of Kansas City’s announced 2027 events, plus our community calendar and upcoming gatherings."
 >
   <Hero
     compact
-    eyebrow="Events"
-    titleLines={["Upcoming", "gatherings."]}
-    intro="PSKC hosts monthly gatherings for community education, engagement, integration, and peer support across Kansas City."
+    eyebrow="Events · 2027"
+    titleLines={["What’s next", "for PSKC."]}
+    intro="Another year of gathering, learning, celebrating, and building community together in Kansas City."
     image="/assets/images/kcpcbanner.jpg"
     imageAlt="Abstract KCPC mandala artwork used for PSKC event pages"
   >
@@ -25,37 +75,54 @@ import { withBase } from "../utils/urls";
     <Button slot="actions" href={site.luma} variant="secondary">Subscribe on Lu.ma</Button>
   </Hero>
 
-  <Section eyebrow="Calendar" title="Upcoming gatherings" intro="Monthly events are designed for learning, conversation, and community care.">
-    <div class="event-mini-grid" aria-label="PSKC event focus areas">
-      <a class="event-mini-card" href={site.luma} target="_blank" rel="noopener noreferrer">
-        <Icon name="calendar" />
-        <div>
-          <h3 class="font-black">Community education and engagement</h3>
-          <p>Monthly events for accessible education, conversation, and connection across Kansas City's psychedelic community.</p>
-        </div>
-      </a>
-      <a class="event-mini-card" href={site.luma} target="_blank" rel="noopener noreferrer">
-        <Icon name="users" />
-        <div>
-          <h3 class="font-black">Integration and peer support</h3>
-          <p>A private, confidential space to share, reflect, and connect with community support.</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="example-event-list" aria-label="Monthly event formats">
-      {exampleEvents.map((event) => (
-        <a class="event-list-card" href={site.luma} target="_blank" rel="noopener noreferrer" aria-label={`View PSKC events for ${event.title}`}>
-          <Icon name={event.icon} />
-          <div>
-            <p class="eyebrow">{event.label}</p>
-            <h3>{event.title}</h3>
-            <p>{event.body}</p>
+  <Section
+    id="lineup-2027"
+    tone="mist"
+    eyebrow="Looking ahead · 2027"
+    title="Four gatherings. One community."
+    intro="Here’s what’s on the horizon, from our anniversary potluck to books, films, and Bicycle Day."
+  >
+    <div class="announced-event-grid" aria-label="Announced PSKC events in 2027">
+      {announcedEvents.map((event) => (
+        <article class="announced-event" aria-labelledby={"announced-" + event.id}>
+          <div class="announced-event__date" aria-hidden="true">
+            <span class="announced-event__month">{event.month}</span>
+            <span class:list={["announced-event__day", event.day === "TBA" && "announced-event__day--tba"]}>{event.day}</span>
+            <span class="announced-event__year">2027</span>
           </div>
-        </a>
+          <div class="announced-event__body">
+            <p class="announced-event__category">
+              <Icon name={event.icon} />
+              <span>{event.category}</span>
+            </p>
+            <h3 id={"announced-" + event.id}>{event.title}</h3>
+            <p class="announced-event__description">{event.description}</p>
+            <div class="announced-event__details">
+              <span class="announced-event__detail">
+                <Icon name="calendar" />
+                {event.dateISO ? (
+                  <time datetime={event.dateISO}>{event.dateLabel}</time>
+                ) : (
+                  <span>{event.dateLabel}</span>
+                )}
+              </span>
+              <span class="announced-event__time">{event.time}</span>
+            </div>
+          </div>
+        </article>
       ))}
     </div>
+    <div class="announced-event-footer">
+      <p>More details, including registration information when available, will be shared on our community calendar.</p>
+      <Button href={site.luma} variant="primary">Follow events on Lu.ma</Button>
+    </div>
+  </Section>
 
+  <Section
+    eyebrow="Community calendar"
+    title="Find your next gathering."
+    intro="Browse upcoming PSKC gatherings, find full event details, and follow along as plans for 2027 take shape."
+  >
     <div class="calendar-panel">
       <img
         class="calendar-panel__placeholder"
@@ -91,3 +158,239 @@ import { withBase } from "../utils/urls";
     </article>
   </Section>
 </BaseLayout>
+
+<style>
+  .announced-event-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1rem, 2.1vw, 1.5rem);
+  }
+
+  .announced-event {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    min-width: 0;
+    overflow: hidden;
+    padding: clamp(1.25rem, 2.4vw, 1.75rem);
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: linear-gradient(145deg, var(--surface-strong), var(--surface));
+    box-shadow: var(--card-shadow);
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+
+  .announced-event::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: .3rem;
+    background: linear-gradient(180deg, var(--gold), var(--fern));
+  }
+
+  .announced-event::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -5rem;
+    right: -5rem;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(118, 183, 229, .11), transparent 70%);
+    pointer-events: none;
+  }
+
+  .announced-event:nth-child(2)::before,
+  .announced-event:nth-child(4)::before {
+    background: linear-gradient(180deg, var(--cyan), var(--gold));
+  }
+
+  .announced-event__date {
+    display: flex;
+    min-height: 9.25rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    padding: .9rem .5rem;
+    border: 1px solid rgba(239, 199, 94, .25);
+    border-radius: .75rem;
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+  }
+
+  .announced-event__month,
+  .announced-event__year {
+    font-size: .77rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: .14em;
+  }
+
+  .announced-event__month {
+    color: var(--gold);
+  }
+
+  .announced-event__year {
+    color: rgba(247, 241, 223, .7);
+  }
+
+  .announced-event__day {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .announced-event__day--tba {
+    font-family: var(--font-body);
+    font-size: 1.65rem;
+    letter-spacing: .06em;
+  }
+
+  .announced-event__body {
+    min-width: 0;
+  }
+
+  .announced-event__category {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .65rem;
+    color: var(--muted);
+    font-size: .78rem;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .announced-event__category :global(.icon) {
+    color: var(--gold-2);
+    font-size: 1.2rem;
+  }
+
+  .announced-event h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.15vw, 1.9rem);
+    font-weight: 700;
+    line-height: 1.14;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+
+  .announced-event__description {
+    max-width: 55ch;
+    margin-top: .8rem;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .announced-event__details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem 1rem;
+    margin-top: 1.25rem;
+    padding-top: .9rem;
+    border-top: 1px solid var(--line);
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .announced-event__detail {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    min-width: 0;
+  }
+
+  .announced-event__detail :global(.icon) {
+    flex-shrink: 0;
+    color: var(--gold-2);
+    font-size: 1.15rem;
+  }
+
+  .announced-event__time {
+    color: var(--muted);
+  }
+
+  .announced-event-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 1.5rem;
+    margin-top: 1.75rem;
+  }
+
+  .announced-event-footer p {
+    max-width: 57ch;
+    color: var(--muted);
+    font-size: .97rem;
+  }
+
+  @media (hover: hover) {
+    .announced-event:hover {
+      border-color: rgba(239, 199, 94, .55);
+      box-shadow: 0 22px 48px rgba(0, 0, 0, .2);
+      transform: translateY(-3px);
+    }
+  }
+
+  @media (min-width: 920px) {
+    .announced-event-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 580px) {
+    .announced-event {
+      grid-template-columns: 4.5rem minmax(0, 1fr);
+      gap: .9rem;
+      padding: 1rem;
+    }
+
+    .announced-event__date {
+      min-height: 6.5rem;
+      padding: .65rem .25rem;
+    }
+
+    .announced-event__month,
+    .announced-event__year {
+      font-size: .66rem;
+    }
+
+    .announced-event__day {
+      font-size: 2.2rem;
+    }
+
+    .announced-event__day--tba {
+      font-size: 1.1rem;
+    }
+
+    .announced-event__details {
+      font-size: .83rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .announced-event {
+      transition: none;
+    }
+
+    .announced-event:hover {
+      transform: none;
+    }
+  }
+</style>
