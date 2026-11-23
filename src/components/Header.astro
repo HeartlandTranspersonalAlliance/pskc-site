@@ -1,6 +1,6 @@
 ---
 import Button from "./Button.astro";
-import { navItems, site } from "../data/site";
+import { navItems } from "../data/site";
 import { stripBase, withBase } from "../utils/urls";
 
 const currentPath = stripBase(Astro.url.pathname);
@@ -30,7 +30,7 @@ const isActive = (href: string) =>
 
     <div class="header-controls">
       <div class="header-action">
-        <Button href={site.discord} variant="primary">Join Discord</Button>
+        <Button href="/join/" variant="primary">Join Us</Button>
       </div>
 
       <details class="mobile-menu">
@@ -45,7 +45,7 @@ const isActive = (href: string) =>
               {item.title}
             </a>
           ))}
-          <Button href={site.discord} variant="primary">Join Discord</Button>
+          <Button href="/join/" variant="primary">Join Us</Button>
         </nav>
       </details>
     </div>
