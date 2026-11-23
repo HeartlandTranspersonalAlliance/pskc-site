@@ -16,7 +16,7 @@ export default defineConfig({
   trailingSlash: "always",
   integrations: [
     sitemap({
-      filter: (page) => !["/membership/", "/applications/"].some((route) => page.endsWith(route)),
+      filter: (page) => !["/membership/", "/applications/", "/join/"].some((route) => page.endsWith(route)),
     }),
     icon({
       include: {
