@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+
+const applications = [
+  {
+    label: "Year-round opportunities",
+    title: "Volunteer with HTA",
+    icon: "heart",
+    body: "Help with events, education, outreach, harm reduction, or behind-the-scenes work. Tell us what you’d like to do and when you’re available. No prior experience is required to apply. Some roles have additional training or screening.",
+    href: "https://forms.gle/LyxUYELDu1dEqNwh9",
+    action: "Open volunteer application",
+  },
+  {
+    label: "Governance & advisory service",
+    title: "Serve on the board or advise HTA",
+    icon: "users",
+    body: "Apply for a voting board seat or express interest in a non-voting advisory or committee role. The board sets strategy and oversees finances and ethics. Experience in law, finance, nonprofit leadership, or community work is welcome, as is lived experience. Prior board service isn’t required.",
+    href: "https://forms.gle/TXoKSLAftjnpBcNP7",
+    action: "Open board application",
+  },
+];
+---
+
+<BaseLayout
+  title="Volunteer & Board Applications"
+  description="Apply to volunteer with Heartland Transpersonal Alliance or express interest in board and advisory service."
+  noIndex
+>
+  <section class="applications">
+    <div class="site-container applications__wrap">
+      <div class="applications__intro">
+        <p class="eyebrow">Heartland Transpersonal Alliance</p>
+        <h1>Find your way to contribute.</h1>
+        <p>
+          Choose the application that fits how you’d like to help the Psychedelic
+          Society of Kansas City, Safe Journey Sanctum, the Kansas City
+          Psychedelic Integration Circle, and the nonprofit behind them.
+        </p>
+      </div>
+
+      <div class="applications__grid">
+        {applications.map(({ label, title, icon, body, href, action }) => (
+          <article class="application-card">
+            <div class="card-icon"><Icon name={icon} /></div>
+            <p class="eyebrow">{label}</p>
+            <h2>{title}</h2>
+            <p class="application-card__description">{body}</p>
+            <a class="button button--primary application-card__action" href={href}>
+              {action} <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        ))}
+      </div>
+      <p class="applications__note">Both applications open in Google Forms.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .applications {
+    padding-block: clamp(2.5rem, 7vw, 6rem);
+  }
+
+  .applications__wrap {
+    max-width: 70rem;
+  }
+
+  .applications__intro {
+    margin-block-end: clamp(1.5rem, 4vw, 2.75rem);
+  }
+
+  .applications__intro h1 {
+    font-size: clamp(2.2rem, 5vw, 3.75rem);
+    line-height: 1.08;
+    text-wrap: balance;
+    margin: 0.55rem 0 0.9rem;
+  }
+
+  .applications__intro > p:last-child {
+    max-width: 65ch;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    margin: 0;
+  }
+
+  .applications__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(0.875rem, 2vw, 1.35rem);
+  }
+
+  .application-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(1.15rem, 3vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: 1.35rem;
+    background: var(--surface);
+    box-shadow: 0 12px 34px rgb(5 14 30 / 0.13);
+  }
+
+  .application-card .card-icon {
+    margin-block-end: 0.85rem;
+  }
+
+  .application-card h2 {
+    margin: 0.4rem 0 0.7rem;
+    font-size: clamp(1.35rem, 3vw, 1.9rem);
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .application-card__description {
+    margin: 0 0 1.3rem;
+  }
+
+  .application-card__action {
+    min-height: 44px;
+    max-width: 100%;
+    margin-block-start: auto;
+    white-space: normal;
+  }
+
+  .application-card__action:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 4px;
+  }
+
+  .applications__note {
+    margin-block-start: 1rem;
+    font-size: 0.925rem;
+  }
+
+  @media (max-width: 44rem) {
+    .applications__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
