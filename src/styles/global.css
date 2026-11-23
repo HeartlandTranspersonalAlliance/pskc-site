@@ -270,18 +270,21 @@ html[data-theme="dark"] .button--outline:hover {
 }
 
 
-.site-header .join-nav-button {
-  text-shadow:
-    -1px 0 #000, 1px 0 #000,
-    0 -1px #000, 0 1px #000,
-    -0.7px -0.7px #000, -0.7px 0.7px #000,
-    0.7px -0.7px #000, 0.7px 0.7px #000;
+/* Match the header's dark surface in either theme, including inside the mobile menu. */
+.site-header .header-controls a.join-nav-button {
+  border-color: var(--gold);
+  background: transparent;
+  color: var(--gold);
+  border-radius: 999px;
 }
 
-@media (forced-colors: active) {
-  .site-header .join-nav-button {
-    text-shadow: none;
-  }
+.site-header .header-controls a.join-nav-button:hover {
+  background: rgba(239, 199, 94, 0.14);
+}
+
+.site-header .header-controls a.join-nav-button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
 .site-header {
