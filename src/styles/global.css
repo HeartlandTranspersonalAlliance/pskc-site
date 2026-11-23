@@ -269,6 +269,21 @@ html[data-theme="dark"] .button--outline:hover {
   border-radius: 999px;
 }
 
+
+.site-header .join-nav-button {
+  text-shadow:
+    -1px 0 #000, 1px 0 #000,
+    0 -1px #000, 0 1px #000,
+    -0.7px -0.7px #000, -0.7px 0.7px #000,
+    0.7px -0.7px #000, 0.7px 0.7px #000;
+}
+
+@media (forced-colors: active) {
+  .site-header .join-nav-button {
+    text-shadow: none;
+  }
+}
+
 .site-header {
   position: sticky;
   top: 0;
